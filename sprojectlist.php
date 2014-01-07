@@ -19,7 +19,8 @@ if(mysqli_num_rows($req) <= 0) {
 
 $res2 = mysqli_query($mysqli, "SELECT * FROM PROJET WHERE ID=".$_GET["pid"]);
 $row = mysqli_fetch_assoc($res2);
-echo "<h2>".$row["INTITULE"]."</h2>";
+$intitule =  stripslashes($row['INTITULE']);
+echo "<h2>".$intitule."</h2>";
 $res1 = mysqli_query($mysqli, "SELECT * FROM SOUSPROJET WHERE PID=".$_GET["pid"]);
 echo '<table>';
 echo '<th>';
@@ -34,7 +35,6 @@ echo '</th>';
 while($row = mysqli_fetch_assoc($res1))
 {
 	$id =  stripslashes($row['ID']);
-	$intitule =  stripslashes($row['INTITULE']);
 	$perimetre =  stripslashes($row['PERIMETRE']);
 
 	echo '<tr>';
