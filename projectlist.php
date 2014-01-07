@@ -27,7 +27,7 @@ while($row = mysqli_fetch_assoc($res))
 	echo ($perimetre);
 	echo '</td>';
 	echo '<td>';
-	echo '<a href="sprojectlist.php?pid='.$id.'">détails</a>';
+	echo '<a href="projectdetails.php?pid='.$id.'">détails</a>';
 	echo '</td>';
 	echo '</tr>';
 }

@@ -1,6 +1,6 @@
 <?php
 include("include/fonctions.php");
-$titre = "Sous projets";
+$titre = "Details du projet";
 include("include/top.php");
 
 if(empty($_GET['pid'])) {
@@ -52,13 +52,14 @@ while($row = mysqli_fetch_assoc($res1))
 	echo ($perimetre);
 	echo '</td>';
 	echo '<td>';
-	echo '<a href="sprojectlist.php?pid='.$id.'">détails</a>';
+	echo '<a href="sousprojetdetails.php?pid='.$id.'">détails</a>';
 	echo '</td>';
 	echo '</tr>';
 }
 echo '</table>';
 echo '<a href="addsproject.php?pid='.$_GET['pid'].'">ajouter un sous projet</a>';
 echo '<br/><br/>';
+
 //AFFICHAGE DES PHASES
 
 $res3 = mysqli_query($mysqli, "SELECT * FROM PHASE WHERE PID=".$_GET["pid"]);
@@ -80,6 +81,9 @@ while($row = mysqli_fetch_assoc($res3))
 	echo '</td>';
 	echo '<td>';
 	echo ($intitule);
+	echo '</td>';
+	echo '<td>';
+	echo '<a href="phasedetails.php?pid='.$id.'">détails</a>';
 	echo '</td>';
 	echo '</tr>';
 }
