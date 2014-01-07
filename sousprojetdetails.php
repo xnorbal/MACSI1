@@ -8,9 +8,9 @@ if(empty($_GET['spid'])) {
 	header("Location: error404.php");
 }
 
-$pid = mysql_real_escape_string($_GET['spid']);
+$spid = mysql_real_escape_string($_GET['spid']);
 $mysqli = connect();
-$res1 = mysqli_query($mysqli, "SELECT * FROM SOUSPROJET WHERE PID=".$_GET["pid"]);
+$res1 = mysqli_query($mysqli, "SELECT * FROM SOUSPROJET WHERE PID=".$spid);
 
 if(mysqli_num_rows($res1) <= 0) {
 	header("HTTP/1.0 404 Not Found");

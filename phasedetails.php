@@ -3,12 +3,12 @@ include("include/fonctions.php");
 $titre = "Details de la phase";
 include("include/top.php");
 
-if(empty($_GET['pid'])) {
+if(empty($_GET['phid'])) {
 	header("HTTP/1.0 404 Not Found");
 	header("Location: error404.php");
 }
 
-$pid = mysql_real_escape_string($_GET['pid']);
+$pid = mysql_real_escape_string($_GET['phid']);
 $mysqli = connect();
 $req = mysqli_query($mysqli, "SELECT * FROM PROJET WHERE ID=".$pid);
 
