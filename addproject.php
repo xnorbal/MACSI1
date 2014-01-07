@@ -1,11 +1,17 @@
 <?php
 include("include/fonctions.php");
 
-if(!empty($_POST['ajouter']))
-{
-	$mysqli = connect();
-	$res = mysqli_query($mysqli, "INSERT INTO PROJET(INTITULE, PERIMETRE) VALUES('".$_POST['intitule']."', '".$_POST['perimetre']."')");
-	header("location:projectlist.php");
+if(!empty($_POST['ajouter'])) {
+	if(!empty($_POST['intitule']) && !empty($_POST['perimetre'])) {
+		$mysqli = connect();
+		$intitule = mysqli_real_escape_string($mysqli, $_POST['intitule']);
+		$perimetre = mysqli_real_escape_string($mysqli, $_POST['perimetre']);
+		$res = mysqli_query($mysqli, "INSERT INTO PROJET(INTITULE, PERIMETRE) VALUES('".$intitule."', '".$perimetre."')");
+		header("location:projectlist.php");
+	}
+	else {
+		$message = "Vous n'avez pas renseigné tous les champs du formulaire.";
+	}
 }
 
 $titre = "Ajout de projet";

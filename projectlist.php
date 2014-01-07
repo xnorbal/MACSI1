@@ -16,15 +16,18 @@ echo 'PERIMETRE';
 echo '</th>';
 while($row = mysqli_fetch_assoc($res))
 {
+	$id =  stripslashes($row['ID']);
+	$intitule =  stripslashes($row['INTITULE']);
+	$perimetre =  stripslashes($row['PERIMETRE']);
 	echo '<tr>';
 	echo '<td>';
-	echo ($row['INTITULE']);
+	echo ($intitule);
 	echo '</td>';
 	echo '<td>';
-	echo ($row['PERIMETRE']);
+	echo ($perimetre);
 	echo '</td>';
 	echo '<td>';
-	echo '<a href="sprojectlist.php?pid='.$row['ID'].'">détails</a>';
+	echo '<a href="sprojectlist.php?pid='.$id.'">détails</a>';
 	echo '</td>';
 	echo '</tr>';
 }
