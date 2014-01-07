@@ -12,4 +12,5 @@ echo $titre;
 <head>
 <body>
 <div id="content">
+<img src="images/logo.png" alt="logo" id="logo" />
 <div class="content">
