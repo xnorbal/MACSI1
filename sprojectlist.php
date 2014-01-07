@@ -20,7 +20,7 @@ if(mysqli_num_rows($req) <= 0) {
 $res2 = mysqli_query($mysqli, "SELECT * FROM PROJET WHERE ID=".$_GET["pid"]);
 $row = mysqli_fetch_assoc($res2);
 $intitule =  stripslashes($row['INTITULE']);
-echo "<h2>".$intitule."</h2>";
+echo "<h2>PROJET :".$intitule."</h2>";
 
 //AFFICHAGE DES SOUS PROJETS
 
