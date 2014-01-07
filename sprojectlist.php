@@ -26,16 +26,26 @@ echo '<th>';
 echo 'SPID';
 echo '</th>';
 echo '<th>';
+echo 'INTITULE';
+echo '</th>';
+echo '<th>';
 echo 'PERIMETRE';
 echo '</th>';
 while($row = mysqli_fetch_assoc($res1))
 {
+	$id =  stripslashes($row['ID']);
+	$intitule =  stripslashes($row['INTITULE']);
+	$perimetre =  stripslashes($row['PERIMETRE']);
+
 	echo '<tr>';
 	echo '<td>';
-	echo ($row['ID']);
+	echo ($id);
 	echo '</td>';
 	echo '<td>';
-	echo ($row['PERIMETRE']);
+	echo ($intitule);
+	echo '</td>';
+	echo '<td>';
+	echo ($perimetre);
 	echo '</td>';
 	echo '</tr>';
 }
