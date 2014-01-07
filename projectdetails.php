@@ -52,7 +52,7 @@ while($row = mysqli_fetch_assoc($res1))
 	echo ($perimetre);
 	echo '</td>';
 	echo '<td>';
-	echo '<a href="sousprojetdetails.php?pid='.$id.'">détails</a>';
+	echo '<a href="sousprojetdetails.php?spid='.$id.'">détails</a>';
 	echo '</td>';
 	echo '</tr>';
 }

@@ -17,7 +17,7 @@ if(mysqli_num_rows($req) <= 0) {
 	header("Location: error404.php");
 }
 
-$res2 = mysqli_query($mysqli, "SELECT * FROM PROJET WHERE ID=".$_GET["pid"]);
+$res2 = mysqli_query($mysqli, "SELECT * FROM PHASE WHERE PID=".$_GET["pid"]);
 $row = mysqli_fetch_assoc($res2);
 $intitule =  stripslashes($row['INTITULE']);
 echo "<h2>PHASE : ".$intitule."</h2>";
@@ -25,7 +25,7 @@ echo "<h2>PHASE : ".$intitule."</h2>";
 //AFFICHAGE DES LOTS de la PHASE
 
 
-$res3 = mysqli_query($mysqli, "SELECT * FROM LOT WHERE PhPID=".$_GET["pid"]);
+$res3 = mysqli_query($mysqli, "SELECT * FROM LOT WHERE PhPID=".$row["ID"]);
 echo '<table>';
 echo '<th>';
 echo 'ID';
@@ -39,12 +39,12 @@ echo '</th>';
 echo '<th>';
 echo 'PERIMETRE';
 echo '</th>';
-while($row = mysqli_fetch_assoc($res3))
+while($row1 = mysqli_fetch_assoc($res3))
 {
-	$id =  stripslashes($row['ID']);
-	$spid = stripslashes($row['SPID']);
-	$phpid = stripslashes($row['PhPID']);
-	$perimetre =  stripslashes($row['PERIMETRE']);
+	$id =  stripslashes($row1['ID']);
+	$spid = stripslashes($row1['SPID']);
+	$phpid = stripslashes($row1['PhPID']);
+	$perimetre =  stripslashes($row1['PERIMETRE']);
 
 	echo '<tr>';
 	echo '<td>';
@@ -62,7 +62,7 @@ while($row = mysqli_fetch_assoc($res3))
 	echo '</tr>';
 }
 echo '</table>';
-echo '<a href="addlot.php?pid='.$_GET['pid'].'">ajouter un lot</a>';
+echo '<a href="addlot.php?phid='.$_GET['pid'].'">ajouter un lot</a>';
 
 
 
