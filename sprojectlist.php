@@ -20,7 +20,10 @@ if(mysqli_num_rows($req) <= 0) {
 $res2 = mysqli_query($mysqli, "SELECT * FROM PROJET WHERE ID=".$_GET["pid"]);
 $row = mysqli_fetch_assoc($res2);
 $intitule =  stripslashes($row['INTITULE']);
-echo "<h2>".$intitule."</h2>";
+echo "<h2>PROJET :".$intitule."</h2>";
+
+//AFFICHAGE DES SOUS PROJETS
+
 $res1 = mysqli_query($mysqli, "SELECT * FROM SOUSPROJET WHERE PID=".$_GET["pid"]);
 echo '<table>';
 echo '<th>';
@@ -52,5 +55,34 @@ while($row = mysqli_fetch_assoc($res1))
 }
 echo '</table>';
 echo '<a href="addsproject.php?pid='.$_GET['pid'].'">ajouter un sous projet</a>';
+echo '<br/><br/>';
+//AFFICHAGE DES PHASES
+
+$res3 = mysqli_query($mysqli, "SELECT * FROM PHASE WHERE PID=".$_GET["pid"]);
+echo '<table>';
+echo '<th>';
+echo 'PPID';
+echo '</th>';
+echo '<th>';
+echo 'INTITULE';
+echo '</th>';
+while($row = mysqli_fetch_assoc($res3))
+{
+	$id =  stripslashes($row['ID']);
+	$intitule =  stripslashes($row['INTITULE']);
+
+	echo '<tr>';
+	echo '<td>';
+	echo ($id);
+	echo '</td>';
+	echo '<td>';
+	echo ($intitule);
+	echo '</td>';
+	echo '</tr>';
+}
+echo '</table>';
+echo '<a href="addphase.php?pid='.$_GET['pid'].'">ajouter une phase</a>';
+
+
 include("include/bottom.php");
 ?>
