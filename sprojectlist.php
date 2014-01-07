@@ -35,6 +35,7 @@ echo '</th>';
 while($row = mysqli_fetch_assoc($res1))
 {
 	$id =  stripslashes($row['ID']);
+	$intitule =  stripslashes($row['INTITULE']);
 	$perimetre =  stripslashes($row['PERIMETRE']);
 
 	echo '<tr>';
