@@ -17,14 +17,14 @@ if(mysqli_num_rows($req) <= 0) {
 	header("Location: error404.php");
 }
 
-$res2 = mysqli_query($mysqli, "SELECT * FROM PROJET WHERE ID=".$_GET["pid"]);
-$row = mysqli_fetch_assoc($res2);
-$intitule =  stripslashes($row['INTITULE']);
+$res2 = mysqli_query($mysqli, "SELECT * FROM PROJET WHERE ID=".$pid);
+$row1 = mysqli_fetch_assoc($res2);
+$intitule =  stripslashes($row1['INTITULE']);
 echo "<h2>PROJET : ".$intitule."</h2>";
 
 //AFFICHAGE DES SOUS PROJETS
 
-$res1 = mysqli_query($mysqli, "SELECT * FROM SOUSPROJET WHERE PID=".$_GET["pid"]);
+$res1 = mysqli_query($mysqli, "SELECT * FROM SOUSPROJET WHERE PID=".$pid);
 echo '<table>';
 echo '<th>';
 echo 'SPID';
@@ -83,7 +83,7 @@ while($row = mysqli_fetch_assoc($res3))
 	echo ($intitule);
 	echo '</td>';
 	echo '<td>';
-	echo '<a href="phasedetails.php?pid='.$id.'">détails</a>';
+	echo '<a href="phasedetails.php?phid='.$id.'">détails</a>';
 	echo '</td>';
 	echo '</tr>';
 }
