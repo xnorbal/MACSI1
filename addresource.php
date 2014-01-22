@@ -10,7 +10,14 @@ if(!empty($_POST['ajouter'])) {
 		switch($_POST["type"])
 		{
 			case 1:
-				
+				$res = mysqli_query($mysqli, "INSERT INTO RESSOURCEM(INTITULE, COUT) VALUES");
+				break;
+			case 2:
+				$res = mysqli_query($mysqli, "INSERT INTO");
+				break;
+			case 3:
+				$res = mysqli_query($mysqli, "INSERT INTO");
+				break;
 		}
 		header("location:resourcelist.php");
 	}
