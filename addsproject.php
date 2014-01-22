@@ -7,12 +7,11 @@ if(empty($_GET['pid'])) {
 	header("Location: error404.php");
 }
 
-$pid = mysql_real_escape_string($_GET['pid']);
-
 $mysqli = connect();
+$pid = mysqli_real_escape_string($mysqli, $_GET['pid']);
 $req = mysqli_query($mysqli, "SELECT * FROM PROJET WHERE ID=".$pid);
 
-if(mysql_num_rows($req) <= 0) {
+if(mysqli_num_rows($req) <= 0) {
 	header("HTTP/1.0 404 Not Found");
 	header("Location: error404.php");
 }
