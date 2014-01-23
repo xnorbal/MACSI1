@@ -25,7 +25,7 @@ echo "<h2>SOUS PROJET : ".$intitule."</h2>";
 
 
 $res2 = mysqli_query($mysqli, "SELECT * FROM LOT WHERE SPID=".$row1["ID"]);
-echo '<table>';
+echo '<table class="table">';
 echo '<th>';
 echo 'ID';
 echo '</th>';
@@ -61,7 +61,7 @@ while($row2 = mysqli_fetch_assoc($res2))
 	echo '</tr>';
 }
 echo '</table>';
-echo '<a href="addlot.php?spid='.$row1["ID"].'">ajouter un lot</a>';
+echo '<a href="addlot.php?spid='.$res1["pid"].'">ajouter un lot</a>';
 
 include("include/bottom.php");
 ?>

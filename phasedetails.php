@@ -17,7 +17,7 @@ if(mysqli_num_rows($req) <= 0) {
 	header("Location: error404.php");
 }
 
-$res2 = mysqli_query($mysqli, "SELECT * FROM PHASE WHERE PID=".$_GET["pid"]);
+$res2 = mysqli_query($mysqli, "SELECT * FROM PHASE WHERE ID=".$_GET["phid"]);
 $row = mysqli_fetch_assoc($res2);
 $intitule =  stripslashes($row['INTITULE']);
 echo "<h2>PHASE : ".$intitule."</h2>";
