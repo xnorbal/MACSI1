@@ -17,4 +17,10 @@ echo $titre;
 <body>
 <div id="content">
 <img src="images/logo.png" alt="logo" id="logo" />
+<nav>
+	<ul>
+		<li><a href="projectlist.php">Projets</a></li>
+		<li><a href="ressourcelist.php">Ressources</a></li>
+	</ul>
+</nav>
 <div class="content">

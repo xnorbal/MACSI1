@@ -47,7 +47,7 @@ nav ul {
 	background: #183152; 
 	box-shadow: 1px 1px 1px #888;
 	width:100%;
-	margin: 0;
+	margin: 5,0,0,0;
 	padding: 0;
 	position: relative;
 	display:inline-table;
@@ -67,19 +67,35 @@ nav li:hover
 
 nav li a{  
   color:#FFFFFF;
+  font-size : 18px;
   text-decoration:none;
   display:block;
   padding:10px 20px;
 }
 
+/** Errors **/
+
+#error
+{
+	color:#B9121B;
+}
+
 /** headlines **/
 
 h2{
-	background-color:#375D81;
+	background-color:#183152;
 	color:#FFFFFF;
 	box-shadow: 1px 1px 1px #888;
 	
 	padding: 5px 20px;
+}
+
+h3{
+	background-color:#375D81;
+	color:#FFFFFF;
+	box-shadow: 1px 1px 1px #888;
+	
+	padding: 5px 10px;
 }
 
 /** table **/
@@ -106,25 +122,6 @@ h2{
 	color:#375D81;
 	padding:10px;
 	vertical-align:top;
-}
-
-.table td.gauche{
-	width:20%;
-	background-color:#ABC8E2;
-	font-size:1.05em;
-	font-weight:bold;
-	text-align:left;
-}
-
-.table ul
-{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-.table blockquote{
-	margin:0 20px;
 }
 
 /** footer **/
