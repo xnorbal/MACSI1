@@ -19,14 +19,17 @@ if(mysqli_num_rows($req) <= 0) {
 ?>
 <h2>Sous projet</h2>
 <form method="post" action="createsproject.php">
-<?php
-echo '<input type="hidden" name="pid" value="'.$_GET['pid'].'"/>';
-?>
-<label for="perimetre">Périmètre :</label>
-<textarea name="perimetre">
-</textarea>
-<br />
-<input type="submit" value="Ajouter"/>
+	<?php
+	echo '<input type="hidden" name="pid" value="'.$_GET['pid'].'"/>';
+	?>
+	<label for="intitule">Intitulé :</label>
+	<input type="text" name="intitule"/>
+	<br />
+	<label for="perimetre">Périmètre :</label>
+	<textarea name="perimetre">
+	</textarea>
+	<br />
+	<input type="submit" value="Ajouter"/>
 </form>
 <?php
 include("include/bottom.php");

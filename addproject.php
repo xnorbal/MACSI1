@@ -17,6 +17,7 @@ if(!empty($_POST['ajouter'])) {
 $titre = "Ajout de projet";
 include("include/top.php");
 ?>
+
 <h2>Projets</h2>
 <form method="post" action="addproject.php">
 	<label for="intitule">Intitulé :</label>
