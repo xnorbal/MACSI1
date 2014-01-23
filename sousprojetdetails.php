@@ -25,7 +25,7 @@ echo "<h2>SOUS PROJET : ".$intitule."</h2>";
 
 
 $res2 = mysqli_query($mysqli, "SELECT * FROM LOT WHERE SPID=".$row1["ID"]);
-echo '<table>';
+echo '<table class="table">';
 echo '<th>';
 echo 'ID';
 echo '</th>';

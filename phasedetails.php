@@ -26,7 +26,7 @@ echo "<h2>PHASE : ".$intitule."</h2>";
 
 
 $res3 = mysqli_query($mysqli, "SELECT * FROM LOT WHERE PhPID=".$row["ID"]);
-echo '<table>';
+echo '<table class="table">';
 echo '<th>';
 echo 'ID';
 echo '</th>';
