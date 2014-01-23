@@ -73,12 +73,13 @@ if(!empty($_GET["spid"])){
 
 //Traitement des formulaires
 
-if(!empty($_POST["fromsproj"]) && !empty($_POST["perimetre"])){
-	
-//} else if(){
-
-
-} //else
+if(!empty($_POST["fromsproj"]) && !empty($_POST["perimetre"]) && !empty($_POST["phid"])){
+	//insertion dans la BD
+} else if(!empty($_POST["fromphase"]) && !empty($_POST["perimetre"]) && !empty($_POST["spid"])){
+	//insetion dans la BD
+} else{
+	//Mettre message d'erreur comme quoi les champs ne sont aps renseignés
+}
 
 
 
