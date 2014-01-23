@@ -146,3 +146,39 @@ footer{
 	text-align:right;
 	border-left: 1px solid #C4D7ED;
 }
+
+.floatLeft {
+	float: left;
+}
+
+.center {
+	text-align: center;
+}
+
+.buttonFollow {
+	background-color: #183152;
+	border: solid 6px #183152;
+	display: block;
+	color: white;
+	font-size: 20px;
+	text-decoration: none;
+	padding: 10px;
+	padding-top: 20px;
+	padding-left: 80px;
+	height: 30px;
+}
+
+.buttonFollow:hover {
+	background-color: white;
+	color: #183152;
+}
+
+.git {
+	background-image: url("images/git.png");
+	background-repeat: no-repeat;
+	width: 230px;
+}
+
+.git:hover {
+	background-image: url("images/githover.png");
+}
