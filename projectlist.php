@@ -7,7 +7,7 @@ include("include/top.php");
 <?php
 $mysqli = connect();
 $res = mysqli_query($mysqli, "SELECT * FROM PROJET");
-echo '<table>';
+echo '<table class="table">';
 echo '<th>';
 echo 'INTITULE';
 echo '</th>';

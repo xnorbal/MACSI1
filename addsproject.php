@@ -34,7 +34,9 @@ else {
 			}
 		}
 		else {
-			$message = "Vous n'avez pas renseigné tous les champs.";
+			$message = "<p class=\"error\">";
+			$message .= "Vous n'avez pas renseigné tous les champs.";
+			$message .= "</p>";
 		}
 	}
 }

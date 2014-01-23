@@ -25,7 +25,7 @@ echo "<h2>PROJET : ".$intitule."</h2>";
 //AFFICHAGE DES SOUS PROJETS
 
 $res1 = mysqli_query($mysqli, "SELECT * FROM SOUSPROJET WHERE PID=".$pid);
-echo '<table>';
+echo '<table class="table">';
 echo '<th>';
 echo 'SPID';
 echo '</th>';
