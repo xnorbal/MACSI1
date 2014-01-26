@@ -1,15 +1,7 @@
 <?php
 include("include/fonctions.php");
-$titre = "Ajout de sous projet";
+$titre = "Ajout de lot";
 include("include/top.php");
-
-
-/*############################
-
-Faire la liste des phase quand on est dans partit du sous projet
-Faire la liste des sous projets quand on est partit de la phase
-
-###############################*/
 
 if(!empty($_GET["spid"])){
 
@@ -41,10 +33,12 @@ if(!empty($_GET["spid"])){
 	<?php
 } else if(!empty($_GET["phid"])){
 
+	$mysqli = connect();
+	
 	echo '<h2>Lot</h2>';
-	$req1 = mysqli_query($mysqli, "SELECT pid,intitule FROM PHASE WHERE ID=".$_GET["phid"]);
+	$req1 = mysqli_query($mysqli, "SELECT PID,INTITULE FROM PHASE WHERE ID=".$_GET["phid"]);
 	$row1 = mysqli_fetch_assoc($req1);
-	echo 'PHASE : '.$row1["intitule"];
+	echo 'PHASE : '.$row1["INTITULE"];
 	echo '<br/>';
 	$req2 = mysqli_query($mysqli, "SELECT pid,intitule FROM SOUSPROJET");
 	?>
@@ -74,11 +68,15 @@ if(!empty($_GET["spid"])){
 //Traitement des formulaires
 
 if(!empty($_POST["fromsproj"]) && !empty($_POST["perimetre"]) && !empty($_POST["phid"])){
+	
 	//insertion dans la BD
+	$reqi1 = mysqli_query($mysqli, "INSERT INTO lot (SPID,PHID,PERIMETRE) VALUES(".$_GET["spid"].",".$_POST["phid"].",".$_POST["perimetre"].")");
+	
 } else if(!empty($_POST["fromphase"]) && !empty($_POST["perimetre"]) && !empty($_POST["spid"])){
+	
 	//insetion dans la BD
-} else{
-	//Mettre message d'erreur comme quoi les champs ne sont aps renseignés
+	$reqi2 = mysqli_query($mysqli, "INSERT INTO lot (SPID,PHID,PERIMETRE) VALUES(".$_POST["spid"].",".$_GET["phid"].",".$_POST["perimetre"].")");
+	
 }
 
 

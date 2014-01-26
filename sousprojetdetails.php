@@ -10,7 +10,7 @@ if(empty($_GET['spid'])) {
 
 $spid = mysql_real_escape_string($_GET['spid']);
 $mysqli = connect();
-$res1 = mysqli_query($mysqli, "SELECT * FROM SOUSPROJET WHERE PID=".$spid);
+$res1 = mysqli_query($mysqli, "SELECT ID,PID,INTITULE,PERIMETRE FROM SOUSPROJET WHERE PID=".$spid);
 
 if(mysqli_num_rows($res1) <= 0) {
 	header("HTTP/1.0 404 Not Found");
@@ -24,7 +24,7 @@ echo "<h2>SOUS PROJET : ".$intitule."</h2>";
 //AFFICHAGE DES LOTS du SOUS PROJET
 
 
-$res2 = mysqli_query($mysqli, "SELECT * FROM LOT WHERE SPID=".$row1["ID"]);
+$res2 = mysqli_query($mysqli, "SELECT ID,SPID,PHID,PERIMETRE FROM LOT WHERE SPID=".$row1["ID"]);
 echo '<table class="table">';
 echo '<th>';
 echo 'ID';
@@ -61,7 +61,7 @@ while($row2 = mysqli_fetch_assoc($res2))
 	echo '</tr>';
 }
 echo '</table>';
-echo '<a href="addlot.php?spid='.$res1["pid"].'">ajouter un lot</a>';
+echo '<a href="addlot.php?spid='.$row1["PID"].'">ajouter un lot</a>';
 
 include("include/bottom.php");
 ?>
