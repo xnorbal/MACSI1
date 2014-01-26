@@ -70,12 +70,14 @@ if(!empty($_GET["spid"])){
 if(!empty($_POST["fromsproj"]) && !empty($_POST["perimetre"]) && !empty($_POST["phid"])){
 	
 	//insertion dans la BD
-	$reqi1 = mysqli_query($mysqli, "INSERT INTO lot (SPID,PHID,PERIMETRE) VALUES(".$_GET["spid"].",".$_POST["phid"].",".$_POST["perimetre"].")");
+	$reqi1 = "INSERT INTO lot (SPID,PHID,PERIMETRE) VALUES('".$_GET["spid"]."','".$_POST["phid"]."','".$_POST["perimetre"]."')";
+	mysqli_query($mysqli, $reqi1);
 	
 } else if(!empty($_POST["fromphase"]) && !empty($_POST["perimetre"]) && !empty($_POST["spid"])){
 	
 	//insetion dans la BD
-	$reqi2 = mysqli_query($mysqli, "INSERT INTO lot (SPID,PHID,PERIMETRE) VALUES(".$_POST["spid"].",".$_GET["phid"].",".$_POST["perimetre"].")");
+	$reqi2 = "INSERT INTO lot (SPID,PHID,PERIMETRE) VALUES('".$_POST["spid"]."','".$_GET["phid"]."','".$_POST["perimetre"]."')";
+	mysqli_query($mysqli, $reqi2);
 	
 }
 
