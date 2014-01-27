@@ -19,6 +19,7 @@ echo $titre;
 <img src="images/logo.png" alt="logo" id="logo" />
 <nav>
 	<ul>
+		<li><a href="index.php">Home</a></li>
 		<li><a href="projectlist.php">Projets</a></li>
 		<li><a href="ressourcelist.php">Ressources</a></li>
 	</ul>
