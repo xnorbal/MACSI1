@@ -14,6 +14,8 @@ echo '</th>';
 echo '<th>';
 echo 'PERIMETRE';
 echo '</th>';
+echo '<th>';
+echo '</th>';
 while($row = mysqli_fetch_assoc($res))
 {
 	$id =  stripslashes($row['ID']);

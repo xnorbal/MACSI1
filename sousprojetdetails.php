@@ -8,8 +8,8 @@ if(empty($_GET['spid'])) {
 	header("Location: error404.php");
 }
 
-$spid = mysql_real_escape_string($_GET['spid']);
 $mysqli = connect();
+$spid = mysqli_real_escape_string($mysqli, $_GET['spid']);
 $res1 = mysqli_query($mysqli, "SELECT ID,PID,INTITULE,PERIMETRE FROM SOUSPROJET WHERE PID=".$spid);
 
 if(mysqli_num_rows($res1) <= 0) {

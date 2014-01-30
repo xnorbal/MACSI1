@@ -8,8 +8,8 @@ if(empty($_GET['phid'])) {
 	header("Location: error404.php");
 }
 
-$pid = mysql_real_escape_string($_GET['phid']);
 $mysqli = connect();
+$pid = mysqli_real_escape_string($mysqli, $_GET['phid']);
 $req = mysqli_query($mysqli, "SELECT ID,INTITULE,PERIMETRE FROM PROJET WHERE ID=".$pid);
 
 if(mysqli_num_rows($req) <= 0) {
