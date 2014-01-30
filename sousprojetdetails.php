@@ -26,6 +26,7 @@ echo "<h2>SOUS PROJET : ".$intitule."</h2>";
 
 $res2 = mysqli_query($mysqli, "SELECT * FROM LOT WHERE SPID=".$row1["ID"]);
 echo '<table class="table">';
+echo '<tr>';
 echo '<th>';
 echo 'ID';
 echo '</th>';
@@ -38,6 +39,9 @@ echo '</th>';
 echo '<th>';
 echo 'PERIMETRE';
 echo '</th>';
+echo '<th>';
+echo '</th>';
+echo '</tr>';
 while($row2 = mysqli_fetch_assoc($res2))
 {
 	$id =  stripslashes($row2['ID']);
@@ -57,6 +61,9 @@ while($row2 = mysqli_fetch_assoc($res2))
 	echo '</td>';
 	echo '<td>';
 	echo ($perimetre);
+	echo '</td>';
+	echo '<td>';
+	echo '<a href="lotsdetails.php?lid='.$id.'">détails</a>';
 	echo '</td>';
 	echo '</tr>';
 }
