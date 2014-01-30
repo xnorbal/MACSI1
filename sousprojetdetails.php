@@ -24,7 +24,7 @@ echo "<h2>SOUS PROJET : ".$intitule."</h2>";
 //AFFICHAGE DES LOTS du SOUS PROJET
 
 
-$res2 = mysqli_query($mysqli, "SELECT ID,SPID,PHID,PERIMETRE FROM LOT WHERE SPID=".$row1["ID"]);
+$res2 = mysqli_query($mysqli, "SELECT * FROM LOT WHERE SPID=".$row1["ID"]);
 echo '<table class="table">';
 echo '<th>';
 echo 'ID';
@@ -33,7 +33,7 @@ echo '<th>';
 echo 'SPID';
 echo '</th>';
 echo '<th>';
-echo 'PhPID';
+echo 'PhID';
 echo '</th>';
 echo '<th>';
 echo 'PERIMETRE';
@@ -42,7 +42,7 @@ while($row2 = mysqli_fetch_assoc($res2))
 {
 	$id =  stripslashes($row2['ID']);
 	$spid = stripslashes($row2['SPID']);
-	$phpid = stripslashes($row2['PhPID']);
+	$phid = stripslashes($row2["PhID"]);
 	$perimetre =  stripslashes($row2['PERIMETRE']);
 
 	echo '<tr>';
@@ -53,7 +53,7 @@ while($row2 = mysqli_fetch_assoc($res2))
 	echo ($spid);
 	echo '</td>';
 	echo '<td>';
-	echo ($phpid);
+	echo ($phid);
 	echo '</td>';
 	echo '<td>';
 	echo ($perimetre);
@@ -61,7 +61,7 @@ while($row2 = mysqli_fetch_assoc($res2))
 	echo '</tr>';
 }
 echo '</table>';
-echo '<a href="addlot.php?spid='.$row1["PID"].'">ajouter un lot</a>';
+echo '<a href="addlot.php?spid='.$row1["ID"].'">ajouter un lot</a>';
 
 include("include/bottom.php");
 ?>
