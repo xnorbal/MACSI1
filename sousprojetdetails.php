@@ -41,6 +41,9 @@ echo 'PERIMETRE';
 echo '</th>';
 echo '<th>';
 echo '</th>';
+echo '<th>';
+echo 'ACTIONS';
+echo '</th>';
 echo '</tr>';
 while($row2 = mysqli_fetch_assoc($res2))
 {
@@ -64,6 +67,9 @@ while($row2 = mysqli_fetch_assoc($res2))
 	echo '</td>';
 	echo '<td>';
 	echo '<a href="lotsdetails.php?lid='.$id.'">détails</a>';
+	echo '</td>';
+	echo '<td>';
+	echo '<a href="deletelot.php?lid='.$id.'" class="supprimer" onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer?\');"></a>';
 	echo '</td>';
 	echo '</tr>';
 }

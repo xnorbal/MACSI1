@@ -182,3 +182,33 @@ footer{
 .git:hover {
 	background-image: url("images/githover.png");
 }
+
+/* Boutons Administration */
+
+.modifier {
+	display: block;
+	height: 25px;
+	width: 25px;
+	background-image: url("images/modifier.png");
+	border: solid 1px black;
+	float: left;
+	margin-right: 5px;
+}
+
+.modifier:hover {
+	background-image: url("images/modifierHover.png");
+}
+
+.supprimer {
+	display: block;
+	height: 25px;
+	width: 25px;
+	background-image: url("images/delete.png");
+	border: solid 1px black;
+	float: left;
+	margin-right: 5px;
+}
+
+.supprimer:hover {
+	background-image: url("images/deleteHover.png");
+}

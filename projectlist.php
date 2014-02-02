@@ -15,6 +15,10 @@ echo '<th>';
 echo 'PERIMETRE';
 echo '</th>';
 echo '<th>';
+echo 'DETAILS';
+echo '</th>';
+echo '<th>';
+echo 'ACTIONS';
 echo '</th>';
 while($row = mysqli_fetch_assoc($res))
 {
@@ -30,6 +34,10 @@ while($row = mysqli_fetch_assoc($res))
 	echo '</td>';
 	echo '<td>';
 	echo '<a href="projectdetails.php?pid='.$id.'">détails</a>';
+	echo '</td>';
+	echo '<td>';
+	echo '<a href="modifyproject.php?pid='.$id.'" class="modifier"></a>';
+	echo '<a href="deleteproject.php?pid='.$id.'" class="supprimer" onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer?\');"></a>';
 	echo '</td>';
 	echo '</tr>';
 }

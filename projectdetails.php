@@ -35,6 +35,10 @@ echo '<th>';
 echo 'PERIMETRE';
 echo '</th>';
 echo '<th>';
+echo 'DETAILS';
+echo '</th>';
+echo '<th>';
+echo 'ACTIONS';
 echo '</th>';
 while($row = mysqli_fetch_assoc($res1))
 {
@@ -52,6 +56,10 @@ while($row = mysqli_fetch_assoc($res1))
 	echo '<td>';
 	echo '<a href="sousprojetdetails.php?spid='.$id.'">détails</a>';
 	echo '</td>';
+	echo '<td>';
+	echo '<a href="modifysproject.php?spid='.$id.'" class="modifier"></a>';
+	echo '<a href="deletesproject.php?spid='.$id.'" class="supprimer" onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer?\');"></a>';
+	echo '</td>';
 	echo '</tr>';
 }
 echo '</table>';
@@ -68,6 +76,10 @@ echo '<th>';
 echo 'INTITULE';
 echo '</th>';
 echo '<th>';
+echo 'DETAILS';
+echo '</th>';
+echo '<th>';
+echo 'ACTIONS';
 echo '</th>';
 while($row = mysqli_fetch_assoc($res3))
 {
@@ -80,6 +92,10 @@ while($row = mysqli_fetch_assoc($res3))
 	echo '</td>';
 	echo '<td>';
 	echo '<a href="phasedetails.php?phid='.$id.'">détails</a>';
+	echo '</td>';
+	echo '<td>';
+	echo '<a href="modifyphase.php?phaseid='.$id.'" class="modifier"></a>';
+	echo '<a href="deletephase.php?phaseid='.$id.'" class="supprimer" onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer?\');"></a>';
 	echo '</td>';
 	echo '</tr>';
 }
@@ -98,8 +114,12 @@ echo '</th>';
 echo '<th>';
 echo 'DATE';
 echo '</th>';
+echo '<th>';
+echo 'ACTIONS';
+echo '</th>';
 while($row = mysqli_fetch_assoc($res3))
 {
+	$jalonid =  stripslashes($row['ID']);
 	$intitule =  stripslashes($row['INTITULE']);
 	$date =  stripslashes($row['SYNCPOINT']);
 	
@@ -108,7 +128,11 @@ while($row = mysqli_fetch_assoc($res3))
 	echo ($intitule);
 	echo '</td>';
 	echo '<td>';
-	echo ($date);
+	echo (formatSQLToFr($date));
+	echo '</td>';
+	echo '<td>';
+	echo '<a href="modifyjalon.php?jalonid='.$jalonid.'" class="modifier"></a>';
+	echo '<a href="deletejalon.php?jalonid='.$jalonid.'" class="supprimer" onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer?\');"></a>';
 	echo '</td>';
 	echo '</tr>';
 }

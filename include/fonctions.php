@@ -17,4 +17,12 @@ function formatTimestampToDateSQL($timestamp) {
 return date("Y-m-d",$timestamp); 
 } 
 
+function formatSQLToFr($date) { 
+$split = explode("-",$date); 
+$jour = $split[2]; 
+$mois = $split[1]; 
+$annee = $split[0]; 
+return "$jour"."/"."$mois"."/"."$annee"; 
+}
+
 ?>
