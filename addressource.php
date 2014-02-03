@@ -23,7 +23,8 @@ if(!empty($_POST['ajouter'])) {
 				{
 					$req = "INSERT INTO RESSOURCEH(COUT, INTITULE, QUALIFICATIONS) VALUES(".$cout.", '".$intitule."', '".$qualifications."')";
 					echo $req;
-					header("location:ressourcelist.php");
+					mysqli_query($mysqli, $req);
+					//header("location:ressourcelist.php");
 				}
 				else
 				{
