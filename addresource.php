@@ -10,7 +10,7 @@ if(!empty($_POST['ajouter'])) {
 		switch($_POST["type"])
 		{
 			case 1:
-				
+			
 		}
 		header("location:resourcelist.php");
 	}

@@ -18,8 +18,12 @@ echo '</th>';
 echo '<th>';
 echo 'QUALIFICATIONS';
 echo '</th>';
+echo '<th>';
+echo 'ACTIONS';
+echo '</th>';
 while($row = mysqli_fetch_assoc($res))
 {
+	$id =  stripslashes($row['ID']);
 	$intitule =  stripslashes($row['INTITULE']);
 	$perimetre =  stripslashes($row['COUT']);
 	$qualifications =  stripslashes($row['QUALIFICATIONS']);
@@ -32,6 +36,10 @@ while($row = mysqli_fetch_assoc($res))
 	echo '</td>';
 	echo '<td>';
 	echo ($qualifications);
+	echo '</td>';
+	echo '<td>';
+	echo '<a href="modifyressource.php?type=humaine&rid='.$id.'" class="modifier"></a>';
+	echo '<a href="deleteressource.php?type=humaine&rid='.$id.'" class="supprimer" onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer?\');"></a>';
 	echo '</td>';
 	echo '</tr>';
 }
@@ -46,8 +54,12 @@ echo '</th>';
 echo '<th>';
 echo 'COUT';
 echo '</th>';
+echo '<th>';
+echo 'ACTIONS';
+echo '</th>';
 while($row = mysqli_fetch_assoc($res))
 {
+	$id =  stripslashes($row['ID']);
 	$intitule =  stripslashes($row['INTITULE']);
 	$perimetre =  stripslashes($row['COUT']);
 	echo '<tr>';
@@ -56,6 +68,10 @@ while($row = mysqli_fetch_assoc($res))
 	echo '</td>';
 	echo '<td>';
 	echo ($perimetre);
+	echo '</td>';
+	echo '<td>';
+	echo '<a href="modifyressource.php?type=logiciel&rid='.$id.'" class="modifier"></a>';
+	echo '<a href="deleteressource.php?type=logiciel&rid='.$id.'" class="supprimer" onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer?\');"></a>';
 	echo '</td>';
 	echo '</tr>';
 }
@@ -70,8 +86,12 @@ echo '</th>';
 echo '<th>';
 echo 'COUT';
 echo '</th>';
+echo '<th>';
+echo 'ACTIONS';
+echo '</th>';
 while($row = mysqli_fetch_assoc($res))
 {
+	$id =  stripslashes($row['ID']);
 	$intitule =  stripslashes($row['INTITULE']);
 	$perimetre =  stripslashes($row['COUT']);
 	echo '<tr>';
@@ -80,6 +100,10 @@ while($row = mysqli_fetch_assoc($res))
 	echo '</td>';
 	echo '<td>';
 	echo ($perimetre);
+	echo '</td>';
+	echo '<td>';
+	echo '<a href="modifyressource.php?type=materiel&rid='.$id.'" class="modifier"></a>';
+	echo '<a href="deleteressource.php?type=materiel&rid='.$id.'" class="supprimer" onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer?\');"></a>';
 	echo '</td>';
 	echo '</tr>';
 }
