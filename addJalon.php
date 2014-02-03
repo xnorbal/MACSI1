@@ -45,7 +45,7 @@ include("include/top.php");
 	<label for="date">Date du jalon :</label>
 	<input type="text" id="datepicker" name="date" />
 	<br />
-	<input type="submit" name="ajouter" value="Ajouter"/>
+	<input type="submit" name="ajouter" value="Ajouter"  class="button" />
 </form>
 <script>
 $(function() {

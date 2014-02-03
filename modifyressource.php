@@ -114,7 +114,7 @@ include("include/top.php");
 		</tr>
 		<tr>
 			<td>
-				<input type="submit" name="modifier" value="Modifier"/>
+				<input type="submit" name="modifier" value="Modifier"  class="button" />
 			</td>
 		</tr>
 	</table>

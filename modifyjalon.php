@@ -47,7 +47,7 @@ include("include/top.php");
 	<label for="date">Date du jalon :</label>
 	<input type="text" id="datepicker" name="date" value="<?php echo formatSQLToFr($dateJalon); ?>" />
 	<br />
-	<input type="submit" name="modifier" value="Modifier"/>
+	<input type="submit" name="modifier" value="Modifier"  class="button" />
 </form>
 <script>
 $(function() {

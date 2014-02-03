@@ -40,7 +40,7 @@ include("include/top.php");
 	<label for="intitule">Intitulé :</label>
 	<input type="text" name="intitule"/>
 	<br />
-	<input type="submit" name="ajouter" value="Ajouter"/>
+	<input type="submit" name="ajouter" value="Ajouter"  class="button" />
 </form>
 <?php
 include("include/bottom.php");

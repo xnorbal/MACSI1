@@ -39,7 +39,7 @@
 			echo '</tr>';
 		}
 		echo '</table>';
-		echo '<a href="createlivrable.php?lid='.$_GET['lid'].'">créer un livrable</a>';
+		echo '<a href="createlivrable.php?lid='.$_GET['lid'].'"  class="button" >créer un livrable</a>';
 		
 		//Tâches
 		
@@ -89,7 +89,7 @@
 			echo '</tr>';
 		}
 		echo '</table>';
-		echo '<a href="createtache.php">créer une tâche</a>';
+		echo '<a href="createtache.php"  class="button" >créer une tâche</a>';
 	}
 	include("include/bottom.php");
 ?>

@@ -27,7 +27,7 @@ include("include/top.php");
 	<textarea name="perimetre">
 	</textarea>
 	<br />
-	<input type="submit" name="ajouter" value="Ajouter"/>
+	<input type="submit" name="ajouter" value="Ajouter"  class="button" />
 </form>
 <?php
 include("include/bottom.php");

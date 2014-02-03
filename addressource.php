@@ -83,7 +83,7 @@ include("include/top.php");
 		</tr>
 		<tr>
 			<td>
-				<input type="submit" name="ajouter" value="Ajouter"/>
+				<input type="submit" name="ajouter" value="Ajouter"  class="button" />
 			</td>
 		</tr>
 	</table>

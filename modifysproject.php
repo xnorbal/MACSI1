@@ -51,7 +51,7 @@ include("include/top.php");
 	<?php echo $perimetreSousProjet; ?>
 	</textarea>
 	<br />
-	<input type="submit" value="Modifier" name="modifier" />
+	<input type="submit" value="Modifier" name="modifier"  class="button" />
 </form>
 <?php
 include("include/bottom.php");

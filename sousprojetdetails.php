@@ -74,7 +74,7 @@ while($row2 = mysqli_fetch_assoc($res2))
 	echo '</tr>';
 }
 echo '</table>';
-echo '<a href="addlot.php?spid='.$row1["ID"].'">ajouter un lot</a>';
+echo '<a href="addlot.php?spid='.$row1["ID"].'"  class="button" >ajouter un lot</a>';
 
 include("include/bottom.php");
 ?>

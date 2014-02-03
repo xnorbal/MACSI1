@@ -54,7 +54,7 @@ else {
 	<textarea name="perimetre">
 	</textarea>
 	<br />
-	<input type="submit" value="Ajouter" name="ajouter" />
+	<input type="submit" value="Ajouter" name="ajouter"  class="button" />
 </form>
 <?php
 include("include/bottom.php");

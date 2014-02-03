@@ -31,7 +31,7 @@ if(!empty($_GET["spid"])){
 		<textarea name="perimetre">
 		</textarea>
 		<br />
-		<input type="submit" value="Ajouter" name="fromsproj"/>
+		<input type="submit" value="Ajouter" name="fromsproj"  class="button" />
 	</form>
 	<?php
 } else if(!empty($_GET["phid"])){
@@ -60,7 +60,7 @@ if(!empty($_GET["spid"])){
 		<textarea name="perimetre">
 		</textarea>
 		<br />
-		<input type="submit" value="Ajouter" name="fromphase"/>
+		<input type="submit" value="Ajouter" name="fromphase"  class="button" />
 	</form>
 <?php
 

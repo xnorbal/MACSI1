@@ -109,6 +109,6 @@ while($row = mysqli_fetch_assoc($res))
 }
 echo '</table>';
 
-echo '<a href="addressource.php">ajouter une ressource</a>';
+echo '<a href="addressource.php"  class="button">ajouter une ressource</a>';
 include("include/bottom.php");
 ?>

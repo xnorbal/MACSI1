@@ -42,6 +42,6 @@ while($row = mysqli_fetch_assoc($res))
 	echo '</tr>';
 }
 echo '</table>';
-echo '<a href="addproject.php">ajouter un projet</a>';
+echo '<a href="addproject.php" class="button">ajouter un projet</a>';
 include("include/bottom.php");
 ?>

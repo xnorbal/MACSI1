@@ -63,7 +63,7 @@ while($row = mysqli_fetch_assoc($res1))
 	echo '</tr>';
 }
 echo '</table>';
-echo '<a href="addsproject.php?pid='.$_GET['pid'].'">ajouter un sous projet</a>';
+echo '<a href="addsproject.php?pid='.$_GET['pid'].'"  class="button">ajouter un sous projet</a>';
 echo '<br/><br/>';
 
 //AFFICHAGE DES PHASES
@@ -100,7 +100,7 @@ while($row = mysqli_fetch_assoc($res3))
 	echo '</tr>';
 }
 echo '</table>';
-echo '<a href="addphase.php?pid='.$_GET['pid'].'">ajouter une phase</a>';
+echo '<a href="addphase.php?pid='.$_GET['pid'].'"  class="button">ajouter une phase</a>';
 
 //AFFICHAGE DES JALONS
 
@@ -137,7 +137,7 @@ while($row = mysqli_fetch_assoc($res3))
 	echo '</tr>';
 }
 echo '</table>';
-echo '<a href="addjalon.php?pid='.$_GET['pid'].'">ajouter un jalon</a>';
+echo '<a href="addjalon.php?pid='.$_GET['pid'].'"  class="button">ajouter un jalon</a>';
 
 include("include/bottom.php");
 ?>

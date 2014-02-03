@@ -41,7 +41,7 @@ include("include/top.php");
 	<label for="intitule">Intitulé :</label>
 	<input type="text" name="intitule" value="<?php echo $intitulePhase; ?>"/>
 	<br />
-	<input type="submit" name="modifier" value="Modifier"/>
+	<input type="submit" name="modifier" value="Modifier"  class="button" />
 </form>
 <?php
 include("include/bottom.php");
