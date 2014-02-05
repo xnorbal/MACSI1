@@ -1,0 +1,132 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{eurosym}
+\usepackage{graphicx}
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+
+%PAGE DE COUVERTURE -> A revoir , en générer une bien stylé
+\makeatletter
+\def\maketitle{
+  \null
+  \thispagestyle{empty}
+  \vfill
+  \begin{center}\leavevmode
+    \normalfont
+    {\LARGE \@title\par}
+    \vskip 1cm
+    {\Large \@author\par}
+    \vskip 1cm
+    {\Large \@date\par}
+  \end{center}
+  \vfill
+  \null
+  \cleardoublepage
+  }
+\makeatother
+\title{PROJET MACSI1 : Réalisation d'une application de gestion de projet }
+\author{RUCKEBUSCH Arnaud - NORBAL Xavier - JOULOT Philippe - NAHA Myriam}
+\date{Encadrant : Yeha Taher}
+
+
+%DEBUT DU DOCUMENT
+
+\begin{document}
+
+\maketitle
+\setcounter{page}{1}
+\tableofcontents
+\newpage
+
+
+
+\section{Introduction}
+\paragraph{}La bonne gestion de projet est un problème récurent actuellement, ce projet a pour but de nous apprendre un processus de gestion de projet étant très grandement utilisé dans différent domaines et plus particulièrement en informatique. Le but final est de réaliser une application permettant la gestion de projet suivant le processus décrit.
+
+\newpage
+
+\section{Approche du sujet et conception de modèle}
+
+\subsection{Les outils utilisés}
+\paragraph{}Pour ce projet et pour nous simplifier le travail de groupe nous avons utilisés GIT (outils de gestion de version très répandu), notepad++ pour effectuer toute la partie rédaction du code, et easyphp/wamp pour les tests de notre application.
+
+\subsection{Modèle de classe}
+\paragraph{} // photo du modèle de classe
+\paragraph{}Pour ce diagramme de classe nous avons choisis de ne pas crée de classe tableau de bord, car nous pensons que cela correspond plus à une méthode qui va générer ce tableau de bord en fonction des autres informations du diagramme.
+\paragraph{}Un projet est composé de sous projets qui sont eux mêmes composés de lots qui sont eux mêmes composés de phases. Un projet est également composé de phases qui est associé à 1 ou plusieurs livrables qui sont généré par les jalons. Les taches dépendent d'elles mêmes et ont chacune un taux d'affectation de ressources qui peuvent être de types humains, logistiques ou bien physiques.
+
+\newpage
+
+\section{Transformation du modèle}
+\subsection{Méthode de transformation}
+\paragraph{}Pour transformer le diagramme de classe précédent en modèle relationnel nous avons simplement appliqué les principes du cours de macsi1 en commençant par les spécialisations, s'en suit les relations et nous finissons par les agrégations pour arriver au modèle relationnel ci dessous.
+\subsection{Modèle relationnel}
+\paragraph{} // Photo du 3FN final
+\paragraph{} //Ajout descriptions pour chaque éléments et pk on a descnedus certains éléments
+\subsection{Eléments 3FN et cohérence}
+\paragraph{} //Passage en  3FN
+
+\newpage
+
+\section{Choix d'implémentation de la base de données}
+\paragraph{}Le modèle 3FN n'est pas toujours le plus efficace, en effet suivant les jointures que nous faisons régulièrement ou bien les restrictions courantes il peut-être utile de démoraliser afin d'obtenir des tables plus grandes mais permettant une meilleure intégrité des données et ceci sans perte d'information. Nous avons donc choisis la BD suivante :
+\\ \\
+//Ctrl C du fichier .SQL et explications des modifications
+
+\newpage
+
+\section{Présentation de l'application}
+
+
+\newpage
+
+\section{Bibliographie}
+\subsection{Logiciels}
+\begin{enumerate}
+	\item Git
+	\item Photophiltre
+	\item EasyPHP / wamp
+	\item TeXworks
+	\item Notepad++
+\end{enumerate}
+
+\subsection{Recherche d’informations}
+\begin{enumerate}
+	\item Github.com
+	\item Easyphp.com
+	\item Php.net
+	\item Cours de macsi1 du premier semestre
+	\item Wikibooks section LaTex
+\end{enumerate}
+
+\newpage
+
+\section{Conclusion}
+\paragraph{}Pour conclure, ce projet nous a permis de bien aborder ce processus de gestion de projet en le concrétisant dans la réalisation d'une application. Les différentes étapes du projet nous ont également permis de mettre a profit nos connaissances dans la conception, transformation de modèle et création de base de données ainsi que dans les langages web HTML/CSS/PHP/MYSQL que nous avons utilisés pour la réalisation de l'application.
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
