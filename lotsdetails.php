@@ -27,19 +27,23 @@
 		echo '</tr>';
 		while($tuple = mysqli_fetch_assoc($res))
 		{
+			$id =  stripslashes($tuple['ID']);
+			
 			echo '<tr>';
-			
 			echo '<td>';
-			echo $tuple['GENRE'];
+			echo stripslashes($tuple['GENRE']);
 			echo '</td>';
 			echo '<td>';
-			echo $tuple['INTITULE'];
+			echo stripslashes($tuple['INTITULE']);
 			echo '</td>';
-			
+			echo '<td>';
+			echo '<a href="modifylivrable.php?livrableid='.$id.'" class="modifier"></a>';
+			echo '<a href="deletelivrable.php?livrableid='.$id.'" class="supprimer" onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer?\');"></a>';
+			echo '</td>';			
 			echo '</tr>';
 		}
 		echo '</table>';
-		echo '<a href="createlivrable.php?lid='.$_GET['lid'].'"  class="button" >créer un livrable</a>';
+		echo '<a href="createlivrable.php?lid='.$_GET['lid'].'"  class="button" >Ajouter un livrable</a>';
 		
 		//Tâches
 		
@@ -85,11 +89,10 @@
 			echo '<td>';
 			echo $tuple['JH_PRIS'];
 			echo '</td>';
-			
 			echo '</tr>';
 		}
 		echo '</table>';
-		echo '<a href="createtache.php"  class="button" >créer une tâche</a>';
+		echo '<a href="addtache.php"  class="button" >Ajouter une tâche</a>';
 	}
 	include("include/bottom.php");
 ?>
