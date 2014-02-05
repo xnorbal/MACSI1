@@ -9,23 +9,24 @@ if(empty($_GET['phid'])) {
 }
 
 $mysqli = connect();
-$pid = mysqli_real_escape_string($mysqli, $_GET['phid']);
-$req = mysqli_query($mysqli, "SELECT ID,INTITULE,PERIMETRE FROM PROJET WHERE ID=".$pid);
+$phid = mysqli_real_escape_string($mysqli, $_GET['phid']);
+$res = mysqli_query($mysqli, "SELECT * FROM PHASE WHERE ID=".$phid);
 
-if(mysqli_num_rows($req) <= 0) {
+if(mysqli_num_rows($res) <= 0) {
 	header("HTTP/1.0 404 Not Found");
 	header("Location: error404.php");
 }
 
-$res2 = mysqli_query($mysqli, "SELECT ID,PID,INTITULE FROM PHASE WHERE ID=".$_GET["phid"]);
-$row = mysqli_fetch_assoc($res2);
+$row = mysqli_fetch_assoc($res);
 $intitule =  stripslashes($row['INTITULE']);
 echo "<h2>PHASE : ".$intitule."</h2>";
 
 //AFFICHAGE DES LOTS de la PHASE
 
 
-$res3 = mysqli_query($mysqli, "SELECT ID,SPID,PHID,PERIMETRE FROM LOT WHERE PHID=".$row["ID"]);
+$res3 = mysqli_query($mysqli, "SELECT ID,SPID,PHID,PERIMETRE FROM LOT WHERE PHID=".$phid);
+
+echo '<h3>Lots</h3>';
 echo '<table class="table">';
 echo '<th>';
 echo 'ID';
@@ -34,7 +35,7 @@ echo '<th>';
 echo 'SPID';
 echo '</th>';
 echo '<th>';
-echo 'PhPID';
+echo 'PHID';
 echo '</th>';
 echo '<th>';
 echo 'PERIMETRE';
@@ -44,7 +45,7 @@ while($row1 = mysqli_fetch_assoc($res3))
 {
 	$id =  stripslashes($row1['ID']);
 	$spid = stripslashes($row1['SPID']);
-	$phpid = stripslashes($row1['PhPID']);
+	$phpid = stripslashes($row1['PHID']);
 	$perimetre =  stripslashes($row1['PERIMETRE']);
 
 	echo '<tr>';
