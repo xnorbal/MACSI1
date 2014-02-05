@@ -24,6 +24,9 @@
 		echo '<th>';
 		echo 'INTITULE';
 		echo '</th>';
+		echo '<th>';
+		echo 'ACTIONS';
+		echo '</th>';
 		echo '</tr>';
 		while($tuple = mysqli_fetch_assoc($res))
 		{

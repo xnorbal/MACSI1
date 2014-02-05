@@ -38,6 +38,7 @@ $titre = "Ajout de projet";
 include("include/top.php");
 ?>
 <h2>Ajouter un jalon au projet "<?php echo $inttuleProjet; ?>"</h2>
+<?php echo $message; ?>
 <form method="post" action="addjalon.php?pid=<?php echo $pid;?>">
 	<label for="intitule">Intitulé :</label>
 	<input type="text" name="intitule"/>
