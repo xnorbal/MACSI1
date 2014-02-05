@@ -64,7 +64,7 @@ while($row1 = mysqli_fetch_assoc($res3))
 	echo '</tr>';
 }
 echo '</table>';
-echo '<a href="addlot.php?phid='.$_GET['phid'].'">ajouter un lot</a>';
+echo '<a href="addlot.php?phid='.$_GET['phid'].'" class="button">ajouter un lot</a>';
 
 
 

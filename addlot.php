@@ -76,7 +76,7 @@ if(!empty($_GET["spid"])){
 	//insetion dans la BD
 	$reqi2 = "INSERT INTO lot (SPID,PHID,PERIMETRE) VALUES('".$_POST["spid"]."','".$_POST["phid"]."','".$_POST["perimetre"]."')";
 	mysqli_query($mysqli, $reqi2);
-	header("Location:phasedetails.php?spid=".$_POST["phid"]);
+	header("Location:phasedetails.php?phid=".$_POST["phid"]);
 } 
 else
 {
