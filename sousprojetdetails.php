@@ -23,6 +23,7 @@ echo "<h2>SOUS PROJET : ".$intitule."</h2>";
 
 //AFFICHAGE DES LOTS du SOUS PROJET
 
+echo '<h3>Lots</h3>';
 
 $res2 = mysqli_query($mysqli, "SELECT * FROM LOT WHERE SPID=".$row1["ID"]);
 echo '<table class="table">';

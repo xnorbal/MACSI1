@@ -92,7 +92,7 @@
 			echo '</tr>';
 		}
 		echo '</table>';
-		echo '<a href="addtache.php"  class="button" >Ajouter une tâche</a>';
+		echo '<a href="addtache.php?lid='.$_GET["lid"].'"  class="button" >Ajouter une tâche</a>';
 	}
 	include("include/bottom.php");
 ?>
