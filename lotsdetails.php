@@ -72,6 +72,9 @@
 		echo '<th>';
 		echo 'JH PRIS';
 		echo '</th>';
+		echo '<th>';
+		echo 'ACTIONS';
+		echo '</th>';
 		echo '</tr>';
 		while($tuple = mysqli_fetch_assoc($res))
 		{
@@ -81,16 +84,20 @@
 			echo $tuple['OBJECTIF'];
 			echo '</td>';
 			echo '<td>';
-			echo $tuple['DATEDEBUT'];
+			echo formatSQLToFr($tuple['DATEDEBUT']);
 			echo '</td>';
 			echo '<td>';
-			echo $tuple['DATEFIN'];
+			echo formatSQLToFr($tuple['DATEFIN']);
 			echo '</td>';
 			echo '<td>';
 			echo $tuple['JH_PREVU'];
 			echo '</td>';
 			echo '<td>';
 			echo $tuple['JH_PRIS'];
+			echo '</td>';
+			echo '<td>';
+			echo '<a href="modifytache.php?tid='.$tuple['ID'].'" class="modifier"></a>';
+			echo '<a href="deletetache.php?tid='.$tuple['ID'].'" class="supprimer" onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer?\');"></a>';
 			echo '</td>';
 			echo '</tr>';
 		}

@@ -7,19 +7,26 @@ if(empty($_GET['lid'])) {
 }
 
 $mysqli = connect();
-$lid = mysqli_real_escape_string($mysqli, $_GET['lid']);
-$req = mysqli_query($mysqli, "SELECT * FROM LOT WHERE ID=".$lid);
+$tid = mysqli_real_escape_string($mysqli, $_GET['tid']);
+$req = mysqli_query($mysqli, "SELECT * FROM TACHE WHERE ID=".$tid);
 
 if(mysqli_num_rows($req) <= 0) {
 	header("HTTP/1.0 404 Not Found");
 	//header("Location: error404.php");
 }
 
-//$row = mysqli_fetch_assoc($req);
-//$inttuleProjet = stripslashes($row['INTITULE']);
+$rowTache = mysqli_fetch_assoc($req);
+
+$idTache = $rowTache["ID"];
+$objTache = $rowTache["OBJECTIF"];
+$dateDebTache = $rowTache["DATEDEBUT"];
+$dateFinTache = $rowTache["DATEFIN"];
+$JHPrevTache = $rowTache["JH_PREVU"];
+$JHPrisTache = $rowTache["JH_PRIS"];
+$lid = $rowTache["LID"];
 
 $message = '';
-if(!empty($_POST['ajouter'])) {
+if(!empty($_POST['modifier'])) {
 	if(!empty($_POST['datedeb']) && !empty($_POST['datefin']) && !empty($_POST['jhprev']) && (!empty($_POST['jhpris']) || $_POST['jhpris'] == 0)) {
 		$objectif = mysqli_real_escape_string($mysqli, $_POST['objectif']);
 		$datedeb = mysqli_real_escape_string($mysqli, $_POST['datedeb']);
@@ -32,8 +39,7 @@ if(!empty($_POST['ajouter'])) {
 		
 		if(strtotime(datefrToEn($datedeb)) <= strtotime(datefrToEn($datefin))){
 			//On insère la tache
-			$reqTache = mysqli_query($mysqli, "INSERT INTO TACHE(LID, OBJECTIF, DATEDEBUT, DATEFIN, JH_PREVU, JH_PRIS) 
-			VALUES(".$lid.",'".$objectif."','".$datedebSQL."','".$datefinSQL."','".$jhprev."','".$jhpris."')");
+			$reqTache = mysqli_query($mysqli, "UPDATE TACHE SET OBJECTIF = '".$objectif."', DATEDEBUT='".$datedebSQL."', DATEFIN='".$datefinSQL."', JH_PREVU=".$jhprev.", JH_PRIS=".$jhpris);
 			header("Location: lotsdetails.php?lid=".$lid);
 		} else {
 			$message = "La date de fin précéde la date de début de la tâche";
@@ -47,32 +53,32 @@ if(!empty($_POST['ajouter'])) {
 $titre = "Nouvelle tâche";
 include("include/top.php");
 ?>
-<h2>Ajout d'une tâche au lot <?php echo $lid; ?></h2>
+<h2>Modifier la tâche <?php echo $idTache; ?> du lot <?php echo $lid; ?></h2>
 <?php echo $message; ?>
 
-<form method="post" action="addtache.php?lid=<?php echo $lid;?>">
+<form method="post" action="modifytache.php?tid=<?php echo $idTache;?>">
 	<table>
 		<tr>
 			<td><label for="intitule">Objectif :</label></td>
-			<td><input type="text" name="objectif"/></td>
+			<td><input type="text" name="objectif" value="<?php echo $objTache; ?>" /></td>
 		</tr>
 		<tr>
 			<td><label for="date">Date de début :</label></td>
-			<td><input type="text" class="datepicker" name="datedeb" /></td>
+			<td><input type="text" class="datepicker" name="datedeb" value="<?php echo formatSQLToFr($dateDebTache); ?>" /></td>
 		</tr>
 		<tr>
 			<td><label for="date">Date de fin :</label></td>
-			<td><input type="text" class="datepicker" name="datefin" /></td>
+			<td><input type="text" class="datepicker" name="datefin" value="<?php echo formatSQLToFr($dateFinTache); ?>" /></td>
 		</tr>
 		<tr>
 			<td><label for="intitule">Jours Homme prévus :</label></td>
-			<td><input type="text" name="jhprev"/></td>
+			<td><input type="text" name="jhprev" value="<?php echo $JHPrevTache; ?>" /></td>
 		</tr>
 		<tr>
 			<td><label for="intitule">Jours Homme pris :</label></td>
-			<td><input type="text" name="jhpris"/></td>
+			<td><input type="text" name="jhpris" value="<?php echo $JHPrisTache; ?>"/></td>
 		</tr>
-		<tr><td><input type="submit" name="ajouter" value="Ajouter"  class="button" /></td></tr>
+		<tr><td><input type="submit" name="modifier" value="Modifier"  class="button" /></td></tr>
 	</table>
 </form>
 
