@@ -70,7 +70,8 @@ while($row2 = mysqli_fetch_assoc($res2))
 	echo '<a href="lotsdetails.php?lid='.$id.'">détails</a>';
 	echo '</td>';
 	echo '<td>';
-	echo '<a href="deletelot.php?lid='.$id.'" class="supprimer" onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer?\');"></a>';
+	echo '<a href="modifylot.php?spid='.$row1["ID"].'&lid='.$id.'" class="modifier"></a>';
+	echo '<a href="deletelot.php?from=sprojet&lid='.$id.'" class="supprimer" onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer?\');"></a>';
 	echo '</td>';
 	echo '</tr>';
 }

@@ -28,6 +28,7 @@ $res3 = mysqli_query($mysqli, "SELECT ID,SPID,PHID,PERIMETRE FROM LOT WHERE PHID
 
 echo '<h3>Lots</h3>';
 echo '<table class="table">';
+echo '<tr>';
 echo '<th>';
 echo 'ID';
 echo '</th>';
@@ -40,6 +41,10 @@ echo '</th>';
 echo '<th>';
 echo 'PERIMETRE';
 echo '</th>';
+echo '<th>';
+echo 'ACTIONS';
+echo '</th>';
+echo '</tr>';
 
 while($row1 = mysqli_fetch_assoc($res3))
 {
@@ -60,6 +65,10 @@ while($row1 = mysqli_fetch_assoc($res3))
 	echo '</td>';
 	echo '<td>';
 	echo ($perimetre);
+	echo '</td>';
+	echo '<td>';
+	echo '<a href="modifylot.php?phid='.$_GET['phid'].'&lid='.$id.'" class="modifier"></a>';
+	echo '<a href="deletelot.php?from=phase&lid='.$id.'" class="supprimer" onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer?\');"></a>';
 	echo '</td>';
 	echo '</tr>';
 }

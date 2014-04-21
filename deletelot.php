@@ -17,7 +17,14 @@ if(mysqli_num_rows($req) <= 0) {
 
 $row = mysqli_fetch_assoc($req);
 $spid = stripslashes($row['SPID']);
+$phid = stripslashes($row['PhID']);
 
 $res = mysqli_query($mysqli, "DELETE FROM LOT WHERE ID=".$lid);
-header("location:sousprojetdetails.php?spid=".$spid);
+
+if($_GET['from'] == 'sprojet') {
+	header("location:sousprojetdetails.php?spid=".$spid);
+}
+else {
+	header("location:phasedetails.php?phid=".$phid);
+}
 ?>
