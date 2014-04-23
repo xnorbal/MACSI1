@@ -98,6 +98,7 @@
 			echo '<td>';
 			echo '<a href="modifytache.php?tid='.$tuple['ID'].'" class="modifier"></a>';
 			echo '<a href="deletetache.php?tid='.$tuple['ID'].'" class="supprimer" onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer?\');"></a>';
+			echo '<a href="dependancesTache.php?tid='.$tuple['ID'].'" class="button">Dépendances</a>';
 			echo '</td>';
 			echo '</tr>';
 		}

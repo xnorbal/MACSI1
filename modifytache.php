@@ -1,9 +1,9 @@
 <?php
 include("include/fonctions.php");
 
-if(empty($_GET['lid'])) {
+if(empty($_GET['tid'])) {
 	header("HTTP/1.0 404 Not Found");
-	//header("Location: error404.php");
+	header("Location: error404.php");
 }
 
 $mysqli = connect();
@@ -12,7 +12,7 @@ $req = mysqli_query($mysqli, "SELECT * FROM TACHE WHERE ID=".$tid);
 
 if(mysqli_num_rows($req) <= 0) {
 	header("HTTP/1.0 404 Not Found");
-	//header("Location: error404.php");
+	header("Location: error404.php");
 }
 
 $rowTache = mysqli_fetch_assoc($req);

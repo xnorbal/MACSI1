@@ -237,3 +237,25 @@ footer{
 .button:hover {
 	background-color: #173152;
 }
+
+.deleteCross {
+	color: rgb(255, 255, 255);
+	background-color: #365d81;
+	display: inline-block;
+	margin-bottom: 0px;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	-moz-user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	width: 15px;
+	text-decoration: none;	
+}
+
+.deleteCross:hover {
+	background-color: #173152;
+}
