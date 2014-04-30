@@ -41,6 +41,7 @@ echo '<th>';
 echo 'PERIMETRE';
 echo '</th>';
 echo '<th>';
+echo 'DETAILS';
 echo '</th>';
 echo '<th>';
 echo 'ACTIONS';
