@@ -19,16 +19,16 @@ if(!empty($_POST['ajouter'])) {
 				header("location:ressourcelist.php");
 				break;
 			case 3:
-				if(!empty($_POST['qualifications']))
+				if(empty($_POST['qualifications']))
+				{
+					$message = "Vous n'avez pas renseigné tous les champs du formulaire.";
+				}
+				else
 				{
 					$req = "INSERT INTO RESSOURCEH(COUT, INTITULE, QUALIFICATIONS) VALUES(".$cout.", '".$intitule."', '".$qualifications."')";
 					echo $req;
 					mysqli_query($mysqli, $req);
-					//header("location:ressourcelist.php");
-				}
-				else
-				{
-					$message = "Vous n'avez pas renseigné tous les champs du formulaire.";
+					header("location:ressourcelist.php");
 				}
 				break;
 		}
