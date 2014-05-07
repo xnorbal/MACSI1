@@ -39,7 +39,7 @@ if(!empty($_POST['modifier'])) {
 		
 		if(strtotime(datefrToEn($datedeb)) <= strtotime(datefrToEn($datefin))){
 			//On insère la tache
-			$reqTache = mysqli_query($mysqli, "UPDATE TACHE SET OBJECTIF = '".$objectif."', DATEDEBUT='".$datedebSQL."', DATEFIN='".$datefinSQL."', JH_PREVU=".$jhprev.", JH_PRIS=".$jhpris);
+			$reqTache = mysqli_query($mysqli, "UPDATE TACHE SET OBJECTIF = '".$objectif."', DATEDEBUT='".$datedebSQL."', DATEFIN='".$datefinSQL."', JH_PREVU=".$jhprev.", JH_PRIS=".$jhpris." WHERE ID='".$idTache."'");
 			header("Location: lotsdetails.php?lid=".$lid);
 		} else {
 			$message = "La date de fin précéde la date de début de la tâche";
