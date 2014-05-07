@@ -3,6 +3,11 @@ include("include/fonctions.php");
 $titre = "Projets";
 include("include/top.php");
 ?>
+
+<!-- Rajouter des boutons pour lier les ressources aux différents taches et jalons
+(donc listing des taches et jalons)
+-->
+
 <h2>Ressources</h2>
 <?php
 $mysqli = connect();
@@ -110,5 +115,7 @@ while($row = mysqli_fetch_assoc($res))
 echo '</table>';
 
 echo '<a href="addressource.php"  class="button">ajouter une ressource</a>';
+echo '&nbsp';
+echo '<a href="affecteressource.php"  class="button">affecter une ressource</a>';
 include("include/bottom.php");
 ?>
