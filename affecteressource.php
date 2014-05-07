@@ -26,7 +26,7 @@ if(!empty($_POST['ajouter'])) {
 	}
 }
 
-$titre = "Ajout de ressources";
+$titre = "Affectation de ressources";
 include("include/top.php");
 ?>
 <!-- //Affichage dans menu déroulant
@@ -57,6 +57,7 @@ include("include/top.php");
 			</td>
 			<td>
 				<select name="type" id="type">
+					<option value="0"></option>
 					<option value="1">Personne</option>
 					<option value="2">Logiciel</option>
 					<option value="3">Materiel</option>
@@ -115,9 +116,12 @@ include("include/top.php");
 			</td>
 			<td>
 				<select name="proj" id="proj">
-					<option value="1">Materiel</option>
-					<option value="2">Logiciel</option>
-					<option value="3">Personne</option>
+				<?php
+					$res = mysqli_query($mysqli, "SELECT * FROM PROJET");
+					while($row = mysqli_fetch_assoc($res)) {
+						echo '<option value="'.$row["id"].'">'.$row[INTITULE].'</option>';
+					}
+				?>
 				</select>
 			</td>
 		</tr>
@@ -126,11 +130,16 @@ include("include/top.php");
 				<label for="task">Tache : </label>
 			</td>
 			<td>
-				<select name="task" id="task">
-					<option value="1">Materiel</option>
-					<option value="2">Logiciel</option>
-					<option value="3">Personne</option>
-				</select>
+				<?php
+					//MANQUE LE PID
+					$res = mysqli_query($mysqli, "SELECT * FROM TACHE WHERE LID IN
+														(SELECT ID FROM LOT WHERE SPID IN
+															(SELECT ID FROM SOUSPROJET WHERE PID IN
+																(SELECT ID FROM PROJET WHERE ID=".$pid.")))");
+					while($row = mysqli_fetch_assoc($res)) {
+						echo '<option value="'.$row["id"].'">'.$row[OBJECTIF].'</option>';
+					}
+				?>
 			</td>
 		</tr>
 		<tr id="txaffectation">
@@ -138,7 +147,7 @@ include("include/top.php");
 				<label for="txaffect">Taux d'affectation : </label>
 			</td>
 			<td>
-				<!-- Mettre un simple type input / vérifier taux < 100 -->
+				<input type="text" name="txaffect" />
 			</td>
 		</tr>
 		<tr>
@@ -165,14 +174,31 @@ include("include/bottom.php");
 	$("#type").change(function(){
 		if(parseInt(this.value)==1){
 			$("#ressourceH").show("Highlight");
-		} else if(parseInt(this.value==2){
+			$("#projet").show("Highlight");
+			$("#ressourceL").hide();
+			$("#ressourceM").hide();
+		} else if(parseInt(this.value)==2){
 			$("#ressourceL").show("Highlight");
-		} else if(parseInt(this.value==3)) {
+			$("#projet").show("Highlight");
+			$("#ressourceH").hide();
+			$("#ressourceM").hide();
+		} else if(parseInt(this.value)==3) {
 			$("#ressourceM").show("Highlight");
+			$("#projet").show("Highlight");
+			$("#ressourceH").hide();
+			$("#ressourceL").hide();
 		} else {
 			$("#ressourceH").hide();
+			$("#projet").hide();
 			$("#ressourceL").hide();
 			$("#ressourceM").hide();
 		}
+	});
+	
+	$("#proj").change(function(){
+		$("#tache").hide();
+		$("#txaffectation").hide();
+		var idProjet = parseInt(this.value);
+		return idProjet;
 	});
 </script>
