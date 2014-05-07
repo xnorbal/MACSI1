@@ -65,15 +65,14 @@ include("include/top.php");
 		</tr>
 		<tr id="ressourceH"> <!-- Requete pour avoir une liste des ressources Humaines -->
 			<td>
-				<label for="ressourceH">Ressource Humaine: </label>
+				<label for="ressH">Ressource Humaine: </label>
 			</td>
 			<td>
-				<select name="ressourceH" id="ressourceH">
+				<select name="ressH" id="ressH">
 				<?php
 					$res = mysqli_query($mysqli, "SELECT * FROM RESSOURCEH");
 					while($row = mysqli_fetch_assoc($res)) {
-						//CHECK LA BD POUR AFF LES BONS TRUCS
-						echo '<option value=""></option>';
+						echo '<option value="'.$row["id"].'">'.$row[INTITULE].'</option>';
 					}
 				?>
 				</select>
@@ -81,15 +80,14 @@ include("include/top.php");
 		</tr>
 		<tr id="ressourceL"> <!-- Requete pour avoir une liste des ressources Logiciel -->
 			<td>
-				<label for="ressourceL">Ressource Logiciel: </label>
+				<label for="ressL">Ressource Logiciel: </label>
 			</td>
 			<td>
-				<select name="ressourceL" id="ressourceL">
+				<select name="ressL" id="ressL">
 				<?php
 					$res = mysqli_query($mysqli, "SELECT * FROM RESSOURCEL");
 					while($row = mysqli_fetch_assoc($res)) {
-						//CHECK LA BD POUR AFF LES BONS TRUCS
-						echo '<option value=""></option>';
+						echo '<option value="'.$row["id"].'">'.$row[INTITULE].'</option>';
 					}
 				?>
 				</select>
@@ -97,15 +95,14 @@ include("include/top.php");
 		</tr>
 		<tr id="ressourceM"> <!-- Requete pour avoir une liste des ressources MAtérielles -->
 			<td>
-				<label for="ressourceM">Ressource Materiel: </label>
+				<label for="ressM">Ressource Materiel: </label>
 			</td>
 			<td>
-				<select name="ressourceM" id="ressourceM">
+				<select name="ressM" id="ressM">
 				<?php
 					$res = mysqli_query($mysqli, "SELECT * FROM RESSOURCEM");
 					while($row = mysqli_fetch_assoc($res)) {
-						//CHECK LA BD POUR AFF LES BONS TRUCS
-						echo '<option value=""></option>';
+						echo '<option value="'.$row["id"].'">'.$row[INTITULE].'</option>';
 					}
 				?>
 				</select>
@@ -114,10 +111,10 @@ include("include/top.php");
 		
 		<tr id="projet"> <!-- Requete pour avoir une liste des projets -->
 			<td>
-				<label for="projet">Projet : </label>
+				<label for="proj">Projet : </label>
 			</td>
 			<td>
-				<select name="projet" id="projet">
+				<select name="proj" id="proj">
 					<option value="1">Materiel</option>
 					<option value="2">Logiciel</option>
 					<option value="3">Personne</option>
@@ -126,10 +123,10 @@ include("include/top.php");
 		</tr>
 		<tr id="tache">  <!-- Requete pour avoir une liste des tâches -->
 			<td>
-				<label for="tache">Tache : </label>
+				<label for="task">Tache : </label>
 			</td>
 			<td>
-				<select name="tache" id="tache">
+				<select name="task" id="task">
 					<option value="1">Materiel</option>
 					<option value="2">Logiciel</option>
 					<option value="3">Personne</option>

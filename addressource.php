@@ -67,7 +67,7 @@ include("include/top.php");
 		</tr>
 		<tr>
 			<td>
-				<label for="intitule">Coût : </label>
+				<label for="cout">Coût : </label>
 			</td>
 			<td>
 				<input type="text" name="cout" />
