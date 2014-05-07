@@ -107,7 +107,7 @@ h3{
 	margin-bottom:10px;
 	
 	border-collapse:collapse;
-	box-shadow: 1px 1px 1px #888;
+	/*box-shadow: 1px 1px 1px #888;*/
 }
 
 .table th{
@@ -121,6 +121,7 @@ h3{
 	background-color:#E1E6FA;
 	color:#375D81;
 	padding:10px;
+	border: solid 2px white;
 	vertical-align:top;
 }
 

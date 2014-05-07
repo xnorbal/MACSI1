@@ -73,7 +73,7 @@ include("include/top.php");
 				<?php
 					$res = mysqli_query($mysqli, "SELECT * FROM RESSOURCEH");
 					while($row = mysqli_fetch_assoc($res)) {
-						echo '<option value="'.$row["id"].'">'.$row[INTITULE].'</option>';
+						echo '<option value="'.$row["ID"].'">'.$row['INTITULE'].'</option>';
 					}
 				?>
 				</select>
@@ -88,7 +88,7 @@ include("include/top.php");
 				<?php
 					$res = mysqli_query($mysqli, "SELECT * FROM RESSOURCEL");
 					while($row = mysqli_fetch_assoc($res)) {
-						echo '<option value="'.$row["id"].'">'.$row[INTITULE].'</option>';
+						echo '<option value="'.$row["ID"].'">'.$row['INTITULE'].'</option>';
 					}
 				?>
 				</select>
@@ -103,7 +103,7 @@ include("include/top.php");
 				<?php
 					$res = mysqli_query($mysqli, "SELECT * FROM RESSOURCEM");
 					while($row = mysqli_fetch_assoc($res)) {
-						echo '<option value="'.$row["id"].'">'.$row[INTITULE].'</option>';
+						echo '<option value="'.$row["ID"].'">'.$row['INTITULE'].'</option>';
 					}
 				?>
 				</select>
@@ -119,7 +119,7 @@ include("include/top.php");
 				<?php
 					$res = mysqli_query($mysqli, "SELECT * FROM PROJET");
 					while($row = mysqli_fetch_assoc($res)) {
-						echo '<option value="'.$row["id"].'">'.$row[INTITULE].'</option>';
+						echo '<option value="'.$row["ID"].'">'.$row['INTITULE'].'</option>';
 					}
 				?>
 				</select>
@@ -132,13 +132,13 @@ include("include/top.php");
 			<td>
 				<?php
 					//MANQUE LE PID
-					$res = mysqli_query($mysqli, "SELECT * FROM TACHE WHERE LID IN
-														(SELECT ID FROM LOT WHERE SPID IN
-															(SELECT ID FROM SOUSPROJET WHERE PID IN
-																(SELECT ID FROM PROJET WHERE ID=".$pid.")))");
-					while($row = mysqli_fetch_assoc($res)) {
-						echo '<option value="'.$row["id"].'">'.$row[OBJECTIF].'</option>';
-					}
+					//$res = mysqli_query($mysqli, "SELECT * FROM TACHE WHERE LID IN
+						//								(SELECT ID FROM LOT WHERE SPID IN
+							//								(SELECT ID FROM SOUSPROJET WHERE PID IN
+								//								(SELECT ID FROM PROJET WHERE ID=".$pid.")))");
+					//while($row = mysqli_fetch_assoc($res)) {
+						//echo '<option value="'.$row["ID"].'">'.$row[OBJECTIF].'</option>';
+					//}
 				?>
 			</td>
 		</tr>
@@ -196,9 +196,32 @@ include("include/bottom.php");
 	});
 	
 	$("#proj").change(function(){
-		$("#tache").hide();
+		/*$("#tache").hide();
 		$("#txaffectation").hide();
 		var idProjet = parseInt(this.value);
-		return idProjet;
+		return idProjet;*/
+		getTaches(this.value);
+		$("#tache").show();
 	});
+	
+	function getTaches(str) {
+		if (str=="") {
+			document.getElementById("tache").innerHTML="";
+			return;
+		} 
+		if (window.XMLHttpRequest) {
+			// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp=new XMLHttpRequest();
+		} else { // code for IE6, IE5
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		
+		xmlhttp.onreadystatechange=function() {
+			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+				document.getElementById("tache").innerHTML=xmlhttp.responseText;
+			}
+		}
+		xmlhttp.open("GET","gettacheajax.php?pid="+str,true);
+		xmlhttp.send();
+	}
 </script>
