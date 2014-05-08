@@ -2,43 +2,71 @@
 include("include/fonctions.php");
 $message ='';
 if(!empty($_POST['ajouter'])) {
-	if(!empty($_POST['intitule']) && !empty($_POST['cout'])) {
+	if(!empty($_POST['type']) && !empty($_POST['txaffect'])) {
 		$mysqli = connect();
 		$type=$_POST['type'];
-		$intitule=$_POST['intitule'];
-		$cout=$_POST['cout'];
-		$qualifications=$_POST['qualifications'];
+		$txaffect=$_POST['txaffect'];
+		$idproj=$_POST['proj'];
+		$idtache=$_POST['task'];
 		switch($_POST["type"])
 		{
+			//Verifier le tx d'affecation préalablement
 			case 1:
-				
+				//enregistrer ressource personne -> TACHERH
+				$idressH = $_POST["ressH"];
+				$res1 = mysqli_query($mysqli, "SELECT TXAFFECTATION FROM TACHERH WHERE RHID=".$idressH."");
+				$sum_txaffect = 0;
+				while($row = mysqli_fetch_assoc($res1)) {
+						$sum_txaffect += $row["TXAFFECTATION"];
+				}
+				if(($sum_txaffect + $txaffect) <= 100){
+					mysqli_query($mysqli, "INSERT INTO TACHERH(TID, RHID, TXAFFECTATION) VALUES(".$idtache.", '".$idressH."', '".$txaffect."')");
+					header("location:ressourcelist.php");
+				} else {
+					$message = "La ressource est utilisee a plus de 100%";
+				}
 				break;
 			case 2:
-				
+				//enregistrer ressource logiciel -> TACHERL
+				$idressL = $_POST["ressL"];
+				$res2 = mysqli_query($mysqli, "SELECT TXAFFECTATION FROM TACHERL WHERE RLID=".$idressL."");
+				$sum_txaffect = 0;
+				while($row = mysqli_fetch_assoc($res2)) {
+						$sum_txaffect += $row["txaffectation"];
+				}
+				if(($sum_txaffect + $txaffect) <= 100){
+					mysqli_query($mysqli, "INSERT INTO TACHERH(TID, RHID, txaffectation) VALUES(".$idtache.", '".$idressL."', '".$txaffect."')");
+					header("location:ressourcelist.php");
+				} else {
+					$message = "La ressource est utilisee a plus de 100%";
+				}
 				break;
 			case 3:
-				
+				//enregistrer ressource materiel -> TACHERM
+				$idressM = $_POST["ressM"];
+				$res3 = mysqli_query($mysqli, "SELECT TXAFFECTATION FROM TACHERM WHERE RMID=".$idressM."");
+				$sum_txaffect = 0;
+				while($row = mysqli_fetch_assoc($res2)) {
+						$sum_txaffect += $row["txaffectation"];
+				}
+				if(($sum_txaffect + $txaffect) <= 100){
+					mysqli_query($mysqli, "INSERT INTO TACHERH(TID, RHID, txaffectation) VALUES(".$idtache.", '".$idressM."', '".$txaffect."')");
+					header("location:ressourcelist.php");
+				} else {
+					$message = "La ressource est utilise a plus de 100%";
+				}
 				break;
 		}
 	}
 	else {
-		$message = "Vous n'avez pas renseigné tous les champs du formulaire.";
+		$message = "casse noisette";
 	}
 }
 
 $titre = "Affectation de ressources";
 include("include/top.php");
 ?>
-<!-- //Affichage dans menu déroulant
-	echo '<tr><td>Dossier:</td>';
-	echo '<td><select name="dossier">';
-	while($cpt >= 0){
-		echo '<option value="'.$contenu_galeries[$cpt].'">'.$contenu_galeries[$cpt].'</option>';
-		$cpt = $cpt - 1;
-	}
-	echo '</select></td></tr>';
-	
-	
+<!-- 
 	Reutiliser le script pour sélectionner le type de ressource et afficher la liste déroulante
 	de la ressource correspondante.
 	
@@ -49,7 +77,7 @@ include("include/top.php");
 <?php $mysqli = connect(); ?>
 <h2>Ressource</h2>
 <div id="error"><?php echo $message; ?></div>
-<form method="post" action="addressource.php">
+<form method="post" action="affecteressource.php">
 	<table>
 		<tr>
 			<td>
@@ -117,6 +145,7 @@ include("include/top.php");
 			<td>
 				<select name="proj" id="proj">
 				<?php
+					echo '<option value="0"></option>';
 					$res = mysqli_query($mysqli, "SELECT * FROM PROJET");
 					while($row = mysqli_fetch_assoc($res)) {
 						echo '<option value="'.$row["ID"].'">'.$row['INTITULE'].'</option>';
@@ -130,6 +159,7 @@ include("include/top.php");
 				<label for="task">Tache : </label>
 			</td>
 			<td>
+				<select name="task" id="task">
 				<?php
 					//MANQUE LE PID
 					//$res = mysqli_query($mysqli, "SELECT * FROM TACHE WHERE LID IN
@@ -150,7 +180,7 @@ include("include/top.php");
 				<input type="text" name="txaffect" />
 			</td>
 		</tr>
-		<tr>
+		<tr id="valider">
 			<td>
 				<input type="submit" name="ajouter" value="Ajouter"  class="button" />
 			</td>
@@ -169,6 +199,7 @@ include("include/bottom.php");
 		$("#projet").hide();
 		$("#tache").hide();
 		$("#txaffectation").hide();
+		$("#valider").hide();
 	});
 	
 	$("#type").change(function(){
@@ -202,6 +233,8 @@ include("include/bottom.php");
 		return idProjet;*/
 		getTaches(this.value);
 		$("#tache").show();
+		$("#txaffectation").show();
+		$("#valider").show();
 	});
 	
 	function getTaches(str) {
