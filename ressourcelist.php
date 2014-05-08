@@ -117,5 +117,7 @@ echo '</table>';
 echo '<a href="addressource.php"  class="button">ajouter une ressource</a>';
 echo '&nbsp';
 echo '<a href="affecteressource.php"  class="button">affecter une ressource</a>';
+echo '&nbsp';
+echo '<a href="tableauaffectationressource.php"  class="button">tableau des affectations</a>';
 include("include/bottom.php");
 ?>

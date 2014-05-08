@@ -35,7 +35,7 @@ if(!empty($_POST['ajouter'])) {
 						$sum_txaffect += $row["txaffectation"];
 				}
 				if(($sum_txaffect + $txaffect) <= 100){
-					mysqli_query($mysqli, "INSERT INTO TACHERH(TID, RHID, txaffectation) VALUES(".$idtache.", '".$idressL."', '".$txaffect."')");
+					mysqli_query($mysqli, "INSERT INTO TACHERL(TID, RLID, txaffectation) VALUES(".$idtache.", '".$idressL."', '".$txaffect."')");
 					header("location:ressourcelist.php");
 				} else {
 					$message = "La ressource est utilisee a plus de 100%";
@@ -50,7 +50,7 @@ if(!empty($_POST['ajouter'])) {
 						$sum_txaffect += $row["txaffectation"];
 				}
 				if(($sum_txaffect + $txaffect) <= 100){
-					mysqli_query($mysqli, "INSERT INTO TACHERH(TID, RHID, txaffectation) VALUES(".$idtache.", '".$idressM."', '".$txaffect."')");
+					mysqli_query($mysqli, "INSERT INTO TACHERM(TID, RMID, txaffectation) VALUES(".$idtache.", '".$idressM."', '".$txaffect."')");
 					header("location:ressourcelist.php");
 				} else {
 					$message = "La ressource est utilise a plus de 100%";
