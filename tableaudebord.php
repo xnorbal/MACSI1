@@ -84,7 +84,7 @@ while($row = mysqli_fetch_assoc($req))
 			echo ($tobjectif);
 			echo '</td>';
 			echo '<td>';
-			echo ($tpris/$tprevu*100 ."%");
+			echo (round($tpris/$tprevu*100)."%");
 			echo '</td>';
 			echo '</tr>';
 			
@@ -98,7 +98,7 @@ while($row = mysqli_fetch_assoc($req))
 		echo 'avancement';
 		echo '</td>';
 		echo '<td>';
-		echo ($lpris/$lprevu*100 ."%");
+		echo (round($lpris/$lprevu*100)."%");
 		echo '</td>';
 		echo '</tr>';
 	}
@@ -107,7 +107,7 @@ while($row = mysqli_fetch_assoc($req))
 	echo 'avancement';
 	echo '</td>';
 	echo '<td>';
-	echo ($sppris/$spprevu*100 ."%");
+	echo (round($sppris/$spprevu*100)."%");
 	echo '</td>';
 	echo '</tr>';
 }
