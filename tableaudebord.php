@@ -10,9 +10,23 @@ if(empty($_GET['pid'])) {
 
 $mysqli = connect();
 $pid = mysqli_real_escape_string($mysqli, $_GET['pid']);
+
+$req = mysqli_query($mysqli, "SELECT * FROM PROJET WHERE ID=".$pid);
+
+if(mysqli_num_rows($req) <= 0) {
+	header("HTTP/1.0 404 Not Found");
+	header("Location: error404.php");
+}
+
+$row = mysqli_fetch_assoc($req);
+$intituleProjet = stripslashes($row['INTITULE']);
+$perimetreProjet = stripslashes($row['PERIMETRE']);
+
+$titre = "Tableau de bord du projet : ".$intituleProjet;
+
 //$req = mysqli_query($mysqli, "SELECT OBJECTIF, JH_PREVU, JH_PRIS FROM TACHE WHERE LID IN(SELECT ID FROM LOT WHERE SPID IN(SELECT ID FROM SOUSPROJET WHERE PID IN(SELECT ID FROM PROJET WHERE ID=".$pid.")))");
 $req = mysqli_query($mysqli, "SELECT ID, INTITULE FROM SOUSPROJET WHERE PID=".$pid);
-echo '<h2>Tableau de bord</h2>';
+echo '<h2>'.$titre.'</h2>';
 echo '<h3>Tâches</h3>';
 
 echo '<table class="table">';
@@ -98,6 +112,38 @@ while($row = mysqli_fetch_assoc($req))
 	echo '</tr>';
 }
 echo '</table>';
+
+$reqTaches = mysqli_query($mysqli, 'SELECT * FROM TACHE WHERE LID IN(SELECT ID FROM LOT WHERE SPID IN (SELECT ID FROM sousprojet WHERE PID = '.$pid.')) ORDER BY DATEDEBUT');
+
+$data = array();
+
+while($row = mysqli_fetch_assoc($reqTaches))
+{
+	$label = stripslashes($row['OBJECTIF']);
+	$start = stripslashes($row['DATEDEBUT']);
+	$end = stripslashes($row['DATEFIN']);
+
+	$data[] = array(
+	  'label' => $label,
+	  'start' => $start, 
+	  'end'   => $end
+	);
+}
+
+require('lib/gantti.php'); 
+
+date_default_timezone_set('UTC');
+setlocale(LC_ALL, 'en_US');
+
+$gantti = new Gantti($data, array(
+  'title'      => 'Test',
+  'cellwidth'  => 27,
+  'cellheight' => 35,
+  'today'      => true
+));
+
+echo $gantti;
+
 ?>
 <?php
 include("include/bottom.php");
