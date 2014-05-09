@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.29)  3 FEB 2014 15:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.29)  9 MAY 2014 21:07
 entering extended mode
-**D:/COURS/PROJETS/MACSI1_gespro/Rapport_MACSI1.tex
-(D:/COURS/PROJETS/MACSI1_gespro/Rapport_MACSI1.tex
+**C:/Users/Nono/Documents/GitHub/MACSI1/Rapport_projet/Rapport_MACSI1.tex
+(C:/Users/Nono/Documents/GitHub/MACSI1/Rapport_projet/Rapport_MACSI1.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -321,40 +321,103 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen106
 \Gin@req@width=\dimen107
 )
-(D:\COURS\PROJETS\MACSI1_gespro\Rapport_MACSI1.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Info: Redefining \degres on input line 38.
-LaTeX Info: Redefining \dots on input line 38.
-LaTeX Info: Redefining \up on input line 38.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+\lst@mode=\count91
+\lst@gtempboxa=\box27
+\lst@token=\toks17
+\lst@length=\count92
+\lst@currlwidth=\dimen108
+\lst@column=\count93
+\lst@pos=\count94
+\lst@lostspace=\dimen109
+\lst@width=\dimen110
+\lst@newlines=\count95
+\lst@lineno=\count96
+\lst@maxwidth=\dimen111
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+\c@lstnumber=\count97
+\lst@skipnumbers=\count98
+\lst@framebox=\box28
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2014/03/04 1.5c listings configuration
+))
+Package: listings 2014/03/04 1.5c (Carsten Heinz)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen112
+\captionmargin@=\dimen113
+\captionwidth=\dimen114
+\caption@tempdima=\dimen115
+\caption@indent=\dimen116
+\caption@parindent=\dimen117
+\caption@hangindent=\dimen118
+)
+\c@ContinuedFloat=\count99
+Package caption Info: listings package is loaded.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\courier.sty"
+Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2014/03/04 1.5c listings language file
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+)
+(C:\Users\Nono\Documents\GitHub\MACSI1\Rapport_projet\Rapport_MACSI1.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Info: Redefining \degres on input line 87.
+LaTeX Info: Redefining \dots on input line 87.
+LaTeX Info: Redefining \up on input line 87.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count91
-\scratchdimen=\dimen108
-\scratchbox=\box27
-\nofMPsegments=\count92
-\nofMParguments=\count93
-\everyMPshowfont=\toks17
-\MPscratchCnt=\count94
-\MPscratchDim=\dimen109
-\MPnumerator=\count95
-\makeMPintoPDFobject=\count96
-\everyMPtoPDFconversion=\toks18
-) [1
+\scratchcounter=\count100
+\scratchdimen=\dimen119
+\scratchbox=\box29
+\nofMPsegments=\count101
+\nofMParguments=\count102
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count103
+\MPscratchDim=\dimen120
+\MPnumerator=\count104
+\makeMPintoPDFobject=\count105
+\everyMPtoPDFconversion=\toks19
+)
+\c@lstlisting=\count106
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+ [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(D:\COURS\PROJETS\MACSI1_gespro\Rapport_MACSI1.toc
+(C:\Users\Nono\Documents\GitHub\MACSI1\Rapport_projet\Rapport_MACSI1.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -363,33 +426,55 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 5.
 )
 \tf@toc=\write3
- [1
 
-] [2] [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 76--79
+[1
+
+] [2] <diagramme_de_classe.jpg, id=16, 711.65875pt x 480.79625pt>
+File: diagramme_de_classe.jpg Graphic file (type jpg)
+
+<use diagramme_de_classe.jpg>
+Package pdftex.def Info: diagramme_de_classe.jpg used on input line 109.
+(pdftex.def)             Requested size: 168.45604pt x 113.81102pt.
+ [3 <C:/Users/Nono/Documents/GitHub/MACSI1/Rapport_projet/diagramme_de_classe.j
+pg>] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 130--132
 
  []
 
-[5] [6] [7] [8] (D:\COURS\PROJETS\MACSI1_gespro\Rapport_MACSI1.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--132
+
+ []
+
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 132.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+(C:\Users\Nono\Documents\GitHub\MACSI1\Rapport_projet\BD_MACSI1.sql [5]
+[6]) [7] [8] [9] [10] [11]
+(C:\Users\Nono\Documents\GitHub\MACSI1\Rapport_projet\Rapport_MACSI1.aux) ) 
 Here is how much of TeX's memory you used:
- 2284 strings out of 493921
- 28782 string characters out of 3144879
- 83037 words of memory out of 3000000
- 5571 multiletter control sequences out of 15000+200000
- 11776 words of font info for 30 fonts, out of 3000000 for 9000
+ 5337 strings out of 493921
+ 74549 string characters out of 3144879
+ 192678 words of memory out of 3000000
+ 8579 multiletter control sequences out of 15000+200000
+ 13835 words of font info for 34 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,4n,24p,520b,175s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users
-\Nono\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> 
-<C:\Users\Nono\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm
-1200.pk> <C:\Users\Nono\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dp
-i600\ecbx1200.pk> <C:\Users\Nono\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
-pen\ec\dpi600\ecbx1728.pk> <C:\Users\Nono\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\ecrm1728.pk> <C:\Users\Nono\AppData\Local\MiKTeX\2.9\fon
-ts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk>
-Output written on Rapport_MACSI1.pdf (9 pages, 99970 bytes).
+ 36i,6n,43p,590b,1892s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/
+Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc} <C:\Users\Nono\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1200.pk> <C:\Us
+ers\Nono\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.p
+k> <C:\Users\Nono\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
+crm1200.pk> <C:\Users\Nono\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
+\dpi600\ecbx1200.pk> <C:\Users\Nono\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
+nappen\ec\dpi600\ecbx1728.pk> <C:\Users\Nono\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecrm1728.pk> <C:\Users\Nono\AppData\Local\MiKTeX\2.9\
+fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on Rapport_MACSI1.pdf (12 pages, 147165 bytes).
 PDF statistics:
- 296 PDF objects out of 1000 (max. 8388607)
+ 330 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
