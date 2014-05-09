@@ -10,6 +10,7 @@ echo $titre;
 ?>
 </title>
 <link rel="stylesheet" type="text/css" href="site.css" />
+<link rel="stylesheet" type="text/css" href="gantti.css" />
 <link rel="stylesheet" type="text/css" href="JQuery/css/smoothness/jquery-ui-1.10.3.custom.min.css" />
 <script type="text/javascript" src="JQuery/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="JQuery/jquery-ui-1.10.3.custom.min.js"></script>
