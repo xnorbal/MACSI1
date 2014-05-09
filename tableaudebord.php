@@ -136,7 +136,7 @@ date_default_timezone_set('UTC');
 setlocale(LC_ALL, 'en_US');
 
 $gantti = new Gantti($data, array(
-  'title'      => 'Test',
+  'title'      => $intituleProjet,
   'cellwidth'  => 27,
   'cellheight' => 35,
   'today'      => true
