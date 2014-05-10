@@ -11,6 +11,7 @@ echo '<h2>Tableau des affectations</h2>';
 
 
 echo '<table class="table">';
+echo '<tr>';
 echo '<th>';
 echo 'RESSOURCE';
 echo '</th>';
@@ -20,7 +21,10 @@ echo '</th>';
 echo '<th>';
 echo 'TAUX D\'AFFECTATION';
 echo '</th>';
-
+echo '<th>';
+echo 'ACTIONS';
+echo '</th>';
+echo '</tr>';
 	
 echo '<tr>';
 echo '<h3>Ressources Humaines</h3>';
@@ -48,11 +52,15 @@ while($row1 = mysqli_fetch_assoc($req1))
 	echo '<td>';
 	echo ($txaffectation);
 	echo '</td>';
+	echo '<td>';
+	echo '<a href="deleteaffectationressource.php?tid='.$tacheID.'&type=H&rtid='.$ressourceID.'" class="supprimer" onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer?\');"></a>';
+	echo '</td>';
 	echo '</tr>';
 }
 
 $req2 = mysqli_query($mysqli, "SELECT TID, RLID, TXAFFECTATION  FROM TACHERL");
 echo '<table class="table">';
+echo '<tr>';
 echo '<th>';
 echo 'RESSOURCE';
 echo '</th>';
@@ -62,6 +70,10 @@ echo '</th>';
 echo '<th>';
 echo 'TAUX D\'AFFECTATION';
 echo '</th>';
+echo '<th>';
+echo 'ACTIONS';
+echo '</th>';
+echo '</tr>';
 echo '<tr>';
 echo '<h3>Ressources Logicielles</h3>';
 
@@ -88,11 +100,15 @@ while($row2 = mysqli_fetch_assoc($req2))
 	echo '<td>';
 	echo ($txaffectation);
 	echo '</td>';
+	echo '<td>';
+	echo '<a href="deleteaffectationressource.php?tid='.$tacheID.'&type=L&rtid='.$ressourceID.'" class="supprimer" onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer?\');"></a>';
+	echo '</td>';
 	echo '</tr>';
 }
 
 $req3 = mysqli_query($mysqli, "SELECT TID, RMID, TXAFFECTATION  FROM TACHERM");
 echo '<table class="table">';
+echo '<tr>';
 echo '<th>';
 echo 'RESSOURCE';
 echo '</th>';
@@ -102,6 +118,10 @@ echo '</th>';
 echo '<th>';
 echo 'TAUX D\'AFFECTATION';
 echo '</th>';
+echo '<th>';
+echo 'ACTIONS';
+echo '</th>';
+echo '</tr>';
 echo '<tr>';
 echo '<h3>Ressources Materielles</h3>';
 
@@ -127,6 +147,9 @@ while($row3 = mysqli_fetch_assoc($req3))
 	echo '</td>';
 	echo '<td>';
 	echo ($txaffectation);
+	echo '</td>';
+	echo '<td>';
+	echo '<a href="deleteaffectationressource.php?tid='.$tacheID.'&type=M&rtid='.$ressourceID.'" class="supprimer" onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer?\');"></a>';
 	echo '</td>';
 	echo '</tr>';
 }
