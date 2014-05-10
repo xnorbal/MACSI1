@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.29)  9 MAY 2014 21:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.29)  10 MAY 2014 06:58
 entering extended mode
 **C:/Users/Nono/Documents/GitHub/MACSI1/Rapport_projet/Rapport_MACSI1.tex
 (C:/Users/Nono/Documents/GitHub/MACSI1/Rapport_projet/Rapport_MACSI1.tex
@@ -374,6 +374,34 @@ Package caption Info: listings package is loaded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\courier.sty"
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
+Package: eso-pic 2013/10/06 v2.0d eso-pic (RN)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty"
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
@@ -381,21 +409,21 @@ File: lstlang1.sty 2014/03/04 1.5c listings language file
 File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
 )
 (C:\Users\Nono\Documents\GitHub\MACSI1\Rapport_projet\Rapport_MACSI1.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Info: Redefining \degres on input line 87.
-LaTeX Info: Redefining \dots on input line 87.
-LaTeX Info: Redefining \up on input line 87.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Info: Redefining \degres on input line 90.
+LaTeX Info: Redefining \dots on input line 90.
+LaTeX Info: Redefining \up on input line 90.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -414,9 +442,16 @@ LaTeX Info: Redefining \up on input line 87.
 \c@lstlisting=\count106
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+\AtBeginShipoutBox=\box30
+ <GESPRO2014.png, id=1, 1003.75pt x 200.75pt>
+File: GESPRO2014.png Graphic file (type png)
+ <use GESPRO2014.png>
+Package pdftex.def Info: GESPRO2014.png used on input line 93.
+(pdftex.def)             Requested size: 390.0pt x 78.00117pt.
  [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Nono/Documents/G
+itHub/MACSI1/Rapport_projet/GESPRO2014.png (PNG copy)>]
 (C:\Users\Nono\Documents\GitHub\MACSI1\Rapport_projet\Rapport_MACSI1.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 5.
@@ -429,38 +464,38 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 [1
 
-] [2] <diagramme_de_classe.jpg, id=16, 711.65875pt x 480.79625pt>
+] [2] <diagramme_de_classe.jpg, id=17, 711.65875pt x 480.79625pt>
 File: diagramme_de_classe.jpg Graphic file (type jpg)
 
 <use diagramme_de_classe.jpg>
-Package pdftex.def Info: diagramme_de_classe.jpg used on input line 109.
+Package pdftex.def Info: diagramme_de_classe.jpg used on input line 116.
 (pdftex.def)             Requested size: 168.45604pt x 113.81102pt.
  [3 <C:/Users/Nono/Documents/GitHub/MACSI1/Rapport_projet/diagramme_de_classe.j
 pg>] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 130--132
+Underfull \hbox (badness 10000) in paragraph at lines 137--139
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--132
+Underfull \hbox (badness 10000) in paragraph at lines 137--139
 
  []
 
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 132.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 139.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 (C:\Users\Nono\Documents\GitHub\MACSI1\Rapport_projet\BD_MACSI1.sql [5]
-[6]) [7] [8] [9] [10] [11]
+[6]) [7] [8] [9] [10] [11] [12]
 (C:\Users\Nono\Documents\GitHub\MACSI1\Rapport_projet\Rapport_MACSI1.aux) ) 
 Here is how much of TeX's memory you used:
- 5337 strings out of 493921
- 74549 string characters out of 3144879
- 192678 words of memory out of 3000000
- 8579 multiletter control sequences out of 15000+200000
+ 5963 strings out of 493921
+ 82827 string characters out of 3144879
+ 274010 words of memory out of 3000000
+ 9187 multiletter control sequences out of 15000+200000
  13835 words of font info for 34 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 36i,6n,43p,590b,1892s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,7n,43p,590b,1908s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/
 Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc} <C:\Users\Nono\
 AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1200.pk> <C:\Us
@@ -472,9 +507,9 @@ nappen\ec\dpi600\ecbx1728.pk> <C:\Users\Nono\AppData\Local\MiKTeX\2.9\fonts\pk\
 ljfour\jknappen\ec\dpi600\ecrm1728.pk> <C:\Users\Nono\AppData\Local\MiKTeX\2.9\
 fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk><C:/Program Files (x86)/MiKTeX 2
 .9/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on Rapport_MACSI1.pdf (12 pages, 147165 bytes).
+Output written on Rapport_MACSI1.pdf (13 pages, 160990 bytes).
 PDF statistics:
- 330 PDF objects out of 1000 (max. 8388607)
+ 335 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

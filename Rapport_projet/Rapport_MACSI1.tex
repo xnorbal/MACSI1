@@ -8,6 +8,7 @@
 \usepackage{color}
 \usepackage{caption}
 \usepackage{courier}
+\usepackage{eso-pic,xcolor,graphicx}
 
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{3}
@@ -60,9 +61,11 @@
          framexleftmargin=17pt,
          framexrightmargin=5pt,
          framexbottommargin=4pt,
+	frame = single;
 	breakatwhitespace=true,
          %backgroundcolor=\color{lightgray},
-         showstringspaces=false      
+        % showstringspaces=false      
+	title=\lstname 
  }
  \lstloadlanguages{% Check Dokumentation for further languages ...
          %[Visual]Basic
@@ -86,7 +89,11 @@
 
 \begin{document}
 
+\begin{figure}[h!]
+	\includegraphics[width=1\textwidth]{GESPRO2014.png}
+\end{figure}
 \maketitle
+
 \setcounter{page}{1}
 \tableofcontents
 \newpage
@@ -133,7 +140,13 @@
 \newpage
 \subsection{Dévéloppement de l'application}
 \paragraph{}Comme énoncé précemment nous avons utilisés plusieurs outils pour le développement de notre application. Nous avons également fait le choix de développer cette application en html-css-php principalement car nous préférons ce langage à d'autres et que la gestion de la base de données s'y préttait bien. Nous avons également utilisé du javascript notamment pour afficher des calendrier lors de la sélection de dates, ainsi que de l'ajax pour avoir des formulaires dynamiques.
-\paragraph{}//METHODE DE DEVELOPPEMENT... blablabli blablabla
+\paragraph{}Nous nous sommes répartis les différentes parties du projet afin de pouvoir les implémenter de manière parallèlles et ainsi profiter au mieux de notre système de gestion de version sans créer trop de conflit lors de nos différents push.
+
+\newpage
+\subsection{Difficultées recontrées}
+\paragraph{}Lors de ce projet les principales difficultés furent l'élaboration du modèle ainsi que la base de donnée, étant des élément clés pour tout le développement du projet il fallait bien être sur qu'avant de coder ces modèles étaient correct et que nous n'aurions pas à revenir dessus au cours du projet, sans quoi de nombreuses choses auraient été à modifier. Maitrisant bien le langage web et il été plus long que difficile d'implémenter notre plateforme.
+
+
 
 
 \newpage
