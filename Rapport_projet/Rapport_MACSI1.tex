@@ -129,7 +129,13 @@ Via ce lien vous pourrez voir les différents moments auxquels nous avons travai
 \paragraph{}Pour transformer le diagramme de classe précédent en modèle relationnel nous avons simplement appliqué les principes du cours de macsi1 en commençant par les spécialisations, s'en suit les relations et nous finissons par les agrégations pour arriver au modèle relationnel ci-dessous.
 
 \subsection{Modèle relationnel}
-\paragraph{}Suite à la lecture du sujet et à différent rendez-vous avec M Taher nous avons établis 
+\paragraph{}Suite à la lecture du sujet et à différent rendez-vous avec M Taher nous avons établis le modèle relationnel suivant :
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[height=4cm]{Classe.png}
+	\caption{Modèle relationnel}
+\end{figure}
 
 \subsection{Eléments 3FN et cohérence}
 \paragraph{} Afin de diminuer les anomalies et les redondances nous avons modifié le modèle relationnel de façon à obtenir une 3ème forme normale et faire en sorte à ce que les attributs non-clé ne soient plus dépendants d’autres attributs ne faisant pas partie de la clé.
@@ -141,7 +147,7 @@ Via ce lien vous pourrez voir les différents moments auxquels nous avons travai
 
 \section{Conception}
 \subsection{Implémentation de la base de données}
-\paragraph{}Le modèle 3FN n'est pas toujours le plus efficace, en effet suivant les jointures que nous faisons régulièrement ou bien les restrictions courantes il peut être utile de démoraliser afin d'obtenir des tables plus grandes mais permettant une meilleure intégrité des données et ceci sans perte d'information. Nous avons donc choisis la BD suivante :
+\paragraph{}Le modèle 3FN n'est pas toujours le plus efficace, en effet suivant les jointures que nous faisons régulièrement ou bien les restrictions courantes il peut être utile de dénormaliser afin d'obtenir des tables plus grandes mais permettant une meilleure intégrité des données et ceci sans perte d'information. Nous avons donc choisis la BD suivante :
 \\ \\
 \lstinputlisting[language=SQL]{BD_MACSI1.sql}
 \newpage
