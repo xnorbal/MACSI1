@@ -10,7 +10,7 @@ if(empty($_GET['spid'])) {
 
 $mysqli = connect();
 $spid = mysqli_real_escape_string($mysqli, $_GET['spid']);
-$res1 = mysqli_query($mysqli, "SELECT ID,PID,INTITULE,PERIMETRE FROM SOUSPROJET WHERE PID=".$spid);
+$res1 = mysqli_query($mysqli, "SELECT ID,PID,INTITULE,PERIMETRE FROM SOUSPROJET WHERE ID=".$spid);
 
 if(mysqli_num_rows($res1) <= 0) {
 	header("HTTP/1.0 404 Not Found");
