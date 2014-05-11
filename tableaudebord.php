@@ -46,8 +46,8 @@ while($row = mysqli_fetch_assoc($req))
 {
 	$spid = stripslashes($row['ID']);
 	$spintitule = stripslashes($row['INTITULE']);
-	$reqsp = mysqli_query($mysqli, "SELECT ID, PERIMETRE FROM LOT WHERE SPID=".$pid);
-	$reqspnb = mysqli_query($mysqli, "SELECT * FROM TACHE WHERE LID IN(SELECT ID FROM LOT WHERE SPID=".$pid.")");
+	$reqsp = mysqli_query($mysqli, "SELECT ID, PERIMETRE FROM LOT WHERE SPID=".$spid);
+	$reqspnb = mysqli_query($mysqli, "SELECT * FROM TACHE WHERE LID IN(SELECT ID FROM LOT WHERE SPID=".$spid.")");
 	$nbtaches = mysqli_num_rows($reqspnb);
 	$nblots = mysqli_num_rows($reqsp);
 	$nblignes = $nbtaches+2*$nblots+2;

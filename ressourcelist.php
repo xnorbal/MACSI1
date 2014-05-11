@@ -1,6 +1,6 @@
 <?php
 include("include/fonctions.php");
-$titre = "Projets";
+$titre = "Ressources";
 include("include/top.php");
 ?>
 
