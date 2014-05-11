@@ -26,7 +26,7 @@
 \contentsline {paragraph}{}{10}
 \contentsline {paragraph}{}{10}
 \contentsline {paragraph}{}{10}
-\contentsline {subsection}{\numberline {4.3}Difficult\IeC {\'e}es recontr\IeC {\'e}es}{11}
+\contentsline {subsection}{\numberline {4.3}Difficult\IeC {\'e}s rencontr\IeC {\'e}es}{11}
 \contentsline {paragraph}{}{11}
 \contentsline {section}{\numberline {5}Pr\IeC {\'e}sentation de l'application}{12}
 \contentsline {paragraph}{}{12}

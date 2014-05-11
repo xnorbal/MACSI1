@@ -99,37 +99,37 @@
 \newpage
 
 \section{Introduction}
-\paragraph{}Dans le cadre du module de méthodes d’analyse et de conception de systèmes d’informations nous avons été amenés à réaliser un projet visant à réaliser une application permettant la gestion de projets avec toutes ses contraintes. En effet, la  bonne gestion de projet est un problème récurrent, ce projet a pour but de nous apprendre un processus de gestion de projet étant très grandement utilisé dans différent domaines et plus particulièrement en informatique. Le but final est de réaliser une application permettant la gestion de projet suivant le processus décrit.
+\paragraph{}Dans le cadre du module de méthodes d’analyse et de conception de systèmes d’informations nous avons été amenés à mettre au point  un projet visant à réaliser une application permettant la gestion de projets avec toutes ses contraintes. En effet, la  bonne gestion de projet est un problème récurrent, ce projet a pour but de nous apprendre un processus de gestion de projet étant très grandement utilisé dans différents domaines et plus particulièrement en informatique. Le but final est de réaliser une application permettant la gestion de projet suivant le processus décrit.
 
 \newpage
 
 \section{Approche du sujet et conception du modèle}
 
 \subsection{Les outils utilisés}
-\paragraph{}Pour ce projet et pour nous simplifier le travail de groupe nous avons utilisés GIT (outils de gestion de version très répandu), notepad++ pour effectuer toute la partie rédaction du code, easyphp/wamp afin de tester notre application en mode local, starUML pour la réalisation du diagramme de classe, ainsi que TexWorks pour la rédaction de ce rapport.
+\paragraph{}Pour ce projet et pour nous simplifier le travail de groupe nous avons utilisé GIT (outil de gestion de version très répandu), notepad++ pour effectuer toute la partie rédaction du code, easyphp/wamp afin de tester notre application en mode local, starUML pour la réalisation du diagramme de classe, ainsi que TexWorks pour la rédaction de ce rapport.
 
 \subsection{Méthode de travail}
-\paragraph{}Nous avons donc travaillés sur un répertoire git accessible à l'adresse suivante : \\ https://github.com/xnorbal/MACSI1  \\
-Via ce lien vous pourrez voir les différents moments auxquels nous avons travaillé, les différents commit que nous avons fait ainsi que nos différentes contributions.
+\paragraph{}Nous avons donc travaillé sur un répertoire git accessible à l'adresse suivante : \\ https://github.com/xnorbal/MACSI1  \\
+Via ce lien vous pourrez voir les différents moments auxquels nous avons travaillé, les différents commit que nous avons faits ainsi que nos différentes contributions.
 
 \subsection{Modèle de classe}
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[height=4cm]{diagramme_de_classe.jpg}
-	\caption{Diagramme de classe}
+	\caption{Diagramme de classes}
 \end{figure}
-\paragraph{}Pour ce diagramme de classe nous avons choisis de ne pas créer de classe tableau de bord, car nous pensons que cela correspond plus à une méthode qui va générer ce tableau de bord en fonction des autres informations du diagramme.
-\paragraph{}Un projet est composé de sous projets qui sont eux-mêmes composés de lots qui sont eux-mêmes composés de phases. Un projet est également composé de phases qui est associé à 1 ou plusieurs livrables qui sont généré par les jalons. Les taches dépendent d'elles-mêmes et ont chacune un taux d'affectation de ressources qui peuvent être de types humains, logistiques ou bien physiques.
+\paragraph{}Pour ce diagramme de classe nous avons choisi de ne pas créer de classe tableau de bord, car nous pensons que cela correspond plus à une méthode qui va générer ce tableau de bord en fonction des autres informations du diagramme.
+\paragraph{}Un projet est composé de sous projets qui sont eux-mêmes composés de lots qui sont eux-mêmes composés de phases.De plus, un projet est composé de phases et est associé à une ou plusieurs livrables qui sont générés par les jalons. Les tâches peuvent dépendre d'autres tâches et chacune peut se voir affecter des ressources suivant un certain taux d'affectation.  Ces ressources peuvent être de différents types: humain, logistique ou bien physique.
 
 \newpage
 
 \section{Transformation du modèle}
 \subsection{Méthode de transformation}
-\paragraph{}Pour transformer le diagramme de classe précédent en modèle relationnel nous avons simplement appliqué les principes du cours de macsi1 en commençant par les spécialisations, s'en suit les relations et nous finissons par les agrégations pour arriver au modèle relationnel ci-dessous.
+\paragraph{}Pour transformer le diagramme de classes précédent en modèle relationnel nous avons simplement appliqué les principes du cours de macsi1 en commençant par traduire les spécialisations, puis les agrégations et pour finir les relations afin d'arriver au modèle relationnel ci-dessous.
 
 \subsection{Modèle relationnel}
-\paragraph{}Suite à la lecture du sujet et à différent rendez-vous avec M Taher nous avons établis le modèle relationnel suivant :
+\paragraph{}Suite à la lecture du sujet et à différents rendez-vous avec M Taher nous avons établi le modèle relationnel suivant :
 
 \begin{figure}[h!]
 	\centering
@@ -138,7 +138,7 @@ Via ce lien vous pourrez voir les différents moments auxquels nous avons travai
 \end{figure}
 
 \subsection{Eléments 3FN et cohérence}
-\paragraph{} Afin de diminuer les anomalies et les redondances nous avons modifié le modèle relationnel de façon à obtenir une 3ème forme normale et faire en sorte à ce que les attributs non-clé ne soient plus dépendants d’autres attributs ne faisant pas partie de la clé.
+\paragraph{} Afin de diminuer les anomalies et les redondances nous avons modifié le modèle relationnel de façon à obtenir une 3ème forme normale et faire en sorte que les attributs non-clé ne soient plus dépendants d’autres attributs ne faisant pas partie de la clé.
 \paragraph{}Par exemple :
 \lstinputlisting[language=SQL]{exemple3FN.sql}
 \paragraph{}Nous voyons bien ici que les attributs non clé sont indépendants entre eux.
@@ -155,12 +155,12 @@ Via ce lien vous pourrez voir les différents moments auxquels nous avons travai
 \paragraph{}Notre application GESPRO permet à un utilisateur donné de répertorier ses projets avec toutes les informations relatives à ce dernier.
 \paragraph{}En effet dans un premier temps l’utilisateur crée un compte au niveau de l’application. Par la suite, il a la possibilité de créer un nouveau projet avant d’avoir la main pour insérer les phases et ajouter des sous-projets. Selon les attentes du projet l’utilisateur a la possibilité d’organiser ses sous-projets en différents lots autant de fois que nécessaire,  créer des livrables et énumérer les différentes tâches tout en y attribuant les ressources adéquates (logicielles, humaines ou encore matérielles). L’application permet également de modifier ou supprimer tous les éléments cités ci-dessus. 
 
-\paragraph{}Comme énoncé précédemment nous avons utilisés plusieurs outils pour le développement de notre application. Nous avons également fait le choix de développer cette application en html-css-php principalement car nous préférons ce langage à d'autres et que la gestion de la base de données s'y prêtait bien. Nous avons également utilisé du javascript notamment pour afficher des calendriers lors de la sélection de dates, ainsi que de l'ajax pour avoir des formulaires dynamiques.
-\paragraph{}Nous nous sommes répartis les différentes parties du projet afin de pouvoir les implémenter de manière parallèles et ainsi profiter au mieux de notre système de gestion de version sans créer trop de conflit lors de nos différents push sur notre dossier Git.
+\paragraph{}Comme énoncé précédemment nous avons utilisé plusieurs outils pour le développement de notre application. Nous avons également fait le choix de développer cette application en html-css-php principalement car nous préférons ce langage à d'autres et que la gestion de la base de données s'y prêtait bien. Nous avons également utilisé du javascript notamment pour afficher des calendriers lors de la sélection de dates, ainsi que de l'ajax pour avoir des formulaires dynamiques.
+\paragraph{}Nous nous sommes répartis les différentes parties du projet afin de pouvoir les implémenter de manière parallèle et ainsi profiter au mieux de notre système de gestion de version sans créer trop de conflits lors de nos différents push sur notre dossier Git.
 
 \newpage
-\subsection{Difficultées recontrées}
-\paragraph{}Lors de ce projet les principales difficultés furent l'élaboration du modèle ainsi que la base de donnée, étant des éléments clés pour tout le développement du projet il fallait bien être sur qu'avant de coder ces modèles étaient correct et que nous n'aurions pas à revenir dessus au cours du projet, sans quoi de nombreuses choses auraient été à modifier. Maitrisant bien le langage web et il été plus long que difficile d'implémenter notre plateforme.
+\subsection{Difficultés rencontrées}
+\paragraph{}Lors de ce projet les principales difficultés furent l'élaboration du modèle ainsi que la base de donnée, étant des éléments clés pour tout le développement du projet il fallait bien être sûr qu'avant de coder ces modèles étaient correct et que nous n'aurions pas à revenir dessus au cours du projet, sans quoi de nombreuses choses auraient été à modifier. Maitrisant bien le langage web il à été plus long que difficile d'implémenter notre plateforme.
 
 \newpage
 
@@ -201,7 +201,7 @@ Via ce lien vous pourrez voir les différents moments auxquels nous avons travai
 \newpage
 
 \section{Conclusion}
-\paragraph{}Pour conclure, ce projet nous a permis de bien aborder ce processus de gestion de projet en le concrétisant dans la réalisation d'une application. Les différentes étapes du projet nous ont également permis de mettre a profit nos connaissances dans la conception, transformation de modèle et création de base de données ainsi que dans les langages web HTML/CSS/PHP/MYSQL que nous avons utilisés pour la réalisation de l'application.
+\paragraph{}Pour conclure, ce projet nous a permis de bien aborder ce processus de gestion de projet en le concrétisant dans la réalisation d'une application. Les différentes étapes du projet nous ont également permis de mettre à profit nos connaissances dans la conception, transformation de modèle et création de base de données ainsi que dans les langages web HTML/CSS/PHP/MYSQL que nous avons utilisés pour la réalisation de l'application.
 
 \end{document}
 
