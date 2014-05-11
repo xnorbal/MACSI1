@@ -4,32 +4,34 @@
 \contentsline {section}{\numberline {2}Approche du sujet et conception du mod\IeC {\`e}le}{3}
 \contentsline {subsection}{\numberline {2.1}Les outils utilis\IeC {\'e}s}{3}
 \contentsline {paragraph}{}{3}
-\contentsline {subsection}{\numberline {2.2}Mod\IeC {\`e}le de classe}{3}
+\contentsline {subsection}{\numberline {2.2}M\IeC {\'e}thode de travail}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {subsection}{\numberline {2.3}Mod\IeC {\`e}le de classe}{3}
 \contentsline {paragraph}{}{3}
 \contentsline {paragraph}{}{3}
-\contentsline {section}{\numberline {3}Transformation du mod\IeC {\`e}le}{4}
-\contentsline {subsection}{\numberline {3.1}M\IeC {\'e}thode de transformation}{4}
-\contentsline {paragraph}{}{4}
-\contentsline {subsection}{\numberline {3.2}Mod\IeC {\`e}le relationnel}{4}
-\contentsline {paragraph}{}{4}
-\contentsline {subsection}{\numberline {3.3}El\IeC {\'e}ments 3FN et coh\IeC {\'e}rence}{4}
-\contentsline {paragraph}{}{4}
-\contentsline {paragraph}{}{4}
-\contentsline {paragraph}{}{4}
-\contentsline {section}{\numberline {4}Conception}{5}
-\contentsline {subsection}{\numberline {4.1}Impl\IeC {\'e}mentation de la base de donn\IeC {\'e}es}{5}
+\contentsline {section}{\numberline {3}Transformation du mod\IeC {\`e}le}{5}
+\contentsline {subsection}{\numberline {3.1}M\IeC {\'e}thode de transformation}{5}
 \contentsline {paragraph}{}{5}
-\contentsline {subsection}{\numberline {4.2}D\IeC {\'e}v\IeC {\'e}loppement de l'application}{8}
-\contentsline {paragraph}{}{8}
-\contentsline {paragraph}{}{8}
-\contentsline {paragraph}{}{8}
-\contentsline {paragraph}{}{8}
-\contentsline {subsection}{\numberline {4.3}Difficult\IeC {\'e}es recontr\IeC {\'e}es}{9}
+\contentsline {subsection}{\numberline {3.2}Mod\IeC {\`e}le relationnel}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {subsection}{\numberline {3.3}El\IeC {\'e}ments 3FN et coh\IeC {\'e}rence}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {section}{\numberline {4}Conception}{6}
+\contentsline {subsection}{\numberline {4.1}Impl\IeC {\'e}mentation de la base de donn\IeC {\'e}es}{6}
+\contentsline {paragraph}{}{6}
+\contentsline {subsection}{\numberline {4.2}D\IeC {\'e}v\IeC {\'e}loppement de l'application}{9}
 \contentsline {paragraph}{}{9}
-\contentsline {section}{\numberline {5}Pr\IeC {\'e}sentation de l'application}{10}
+\contentsline {paragraph}{}{9}
+\contentsline {paragraph}{}{9}
+\contentsline {paragraph}{}{9}
+\contentsline {subsection}{\numberline {4.3}Difficult\IeC {\'e}es recontr\IeC {\'e}es}{10}
 \contentsline {paragraph}{}{10}
-\contentsline {section}{\numberline {6}Bibliographie}{11}
-\contentsline {subsection}{\numberline {6.1}Logiciels}{11}
-\contentsline {subsection}{\numberline {6.2}Recherche d\IeC {\textquoteright }informations}{11}
-\contentsline {section}{\numberline {7}Conclusion}{12}
-\contentsline {paragraph}{}{12}
+\contentsline {section}{\numberline {5}Pr\IeC {\'e}sentation de l'application}{11}
+\contentsline {paragraph}{}{11}
+\contentsline {section}{\numberline {6}Bibliographie}{12}
+\contentsline {subsection}{\numberline {6.1}Logiciels}{12}
+\contentsline {subsection}{\numberline {6.2}Recherche d\IeC {\textquoteright }informations}{12}
+\contentsline {section}{\numberline {7}Conclusion}{13}
+\contentsline {paragraph}{}{13}

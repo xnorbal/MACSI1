@@ -35,7 +35,7 @@
 \makeatother
 \title{PROJET MACSI1 : Réalisation d'une application de gestion de projet }
 \author{RUCKEBUSCH Arnaud - NORBAL Xavier - JOULOT Philippe - NAHA Myriam}
-\date{Encadrant : Yeha Taher}
+\date{Encadrant : Yehia Taher}
 
 
 %%% PARAMETRES INSERTION DE CODE %%%%%%
@@ -99,14 +99,18 @@
 \newpage
 
 \section{Introduction}
-\paragraph{}Dans le cadre du module de méthodes d’analyse et de conception de systèmes d’informations nous avons été amenés à réaliser un projet visant à réaliser une application permettant la gestion de projets avec toutes ses contraintes. En effet, la  bonne gestion de projet est un problème récurent, ce projet a pour but de nous apprendre un processus de gestion de projet étant très grandement utilisé dans différent domaines et plus particulièrement en informatique. Le but final est de réaliser une application permettant la gestion de projet suivant le processus décrit.
+\paragraph{}Dans le cadre du module de méthodes d’analyse et de conception de systèmes d’informations nous avons été amenés à réaliser un projet visant à réaliser une application permettant la gestion de projets avec toutes ses contraintes. En effet, la  bonne gestion de projet est un problème récurrent, ce projet a pour but de nous apprendre un processus de gestion de projet étant très grandement utilisé dans différent domaines et plus particulièrement en informatique. Le but final est de réaliser une application permettant la gestion de projet suivant le processus décrit.
 
 \newpage
 
 \section{Approche du sujet et conception du modèle}
 
 \subsection{Les outils utilisés}
-\paragraph{}Pour ce projet et pour nous simplifier le travail de groupe nous avons utilisés GIT (outils de gestion de version très répandu), notepad++ pour effectuer toute la partie rédaction du code, easyphp/wamp afin de tester notre application en mode local, starUML pour la réalisation du diagramme de classe, ainsi que TexWorks pour la rédaction de ce rapport..
+\paragraph{}Pour ce projet et pour nous simplifier le travail de groupe nous avons utilisés GIT (outils de gestion de version très répandu), notepad++ pour effectuer toute la partie rédaction du code, easyphp/wamp afin de tester notre application en mode local, starUML pour la réalisation du diagramme de classe, ainsi que TexWorks pour la rédaction de ce rapport.
+
+\subsection{Méthode de travail}
+\paragraph{}Nous avons donc travaillés sur un répertoire git accessible à l'adresse suivante : \\ https://github.com/xnorbal/MACSI1  \\
+Via ce lien vous pourrez voir les différents moments auxquels nous avons travaillé, les différents commit que nous avons fait ainsi que nos différentes contributions.
 
 \subsection{Modèle de classe}
 
@@ -116,13 +120,13 @@
 	\caption{Diagramme de classe}
 \end{figure}
 \paragraph{}Pour ce diagramme de classe nous avons choisis de ne pas créer de classe tableau de bord, car nous pensons que cela correspond plus à une méthode qui va générer ce tableau de bord en fonction des autres informations du diagramme.
-\paragraph{}Un projet est composé de sous projets qui sont eux mêmes composés de lots qui sont eux mêmes composés de phases. Un projet est également composé de phases qui est associé à 1 ou plusieurs livrables qui sont généré par les jalons. Les taches dépendent d'elles mêmes et ont chacune un taux d'affectation de ressources qui peuvent être de types humains, logistiques ou bien physiques.
+\paragraph{}Un projet est composé de sous projets qui sont eux-mêmes composés de lots qui sont eux-mêmes composés de phases. Un projet est également composé de phases qui est associé à 1 ou plusieurs livrables qui sont généré par les jalons. Les taches dépendent d'elles-mêmes et ont chacune un taux d'affectation de ressources qui peuvent être de types humains, logistiques ou bien physiques.
 
 \newpage
 
 \section{Transformation du modèle}
 \subsection{Méthode de transformation}
-\paragraph{}Pour transformer le diagramme de classe précédent en modèle relationnel nous avons simplement appliqué les principes du cours de macsi1 en commençant par les spécialisations, s'en suit les relations et nous finissons par les agrégations pour arriver au modèle relationnel ci dessous.
+\paragraph{}Pour transformer le diagramme de classe précédent en modèle relationnel nous avons simplement appliqué les principes du cours de macsi1 en commençant par les spécialisations, s'en suit les relations et nous finissons par les agrégations pour arriver au modèle relationnel ci-dessous.
 
 \subsection{Modèle relationnel}
 \paragraph{}Suite à la lecture du sujet et à différent rendez-vous avec M Taher nous avons établis 
@@ -137,7 +141,7 @@
 
 \section{Conception}
 \subsection{Implémentation de la base de données}
-\paragraph{}Le modèle 3FN n'est pas toujours le plus efficace, en effet suivant les jointures que nous faisons régulièrement ou bien les restrictions courantes il peut-être utile de démoraliser afin d'obtenir des tables plus grandes mais permettant une meilleure intégrité des données et ceci sans perte d'information. Nous avons donc choisis la BD suivante :
+\paragraph{}Le modèle 3FN n'est pas toujours le plus efficace, en effet suivant les jointures que nous faisons régulièrement ou bien les restrictions courantes il peut être utile de démoraliser afin d'obtenir des tables plus grandes mais permettant une meilleure intégrité des données et ceci sans perte d'information. Nous avons donc choisis la BD suivante :
 \\ \\
 \lstinputlisting[language=SQL]{BD_MACSI1.sql}
 \newpage
@@ -145,12 +149,12 @@
 \paragraph{}Notre application GESPRO permet à un utilisateur donné de répertorier ses projets avec toutes les informations relatives à ce dernier.
 \paragraph{}En effet dans un premier temps l’utilisateur crée un compte au niveau de l’application. Par la suite, il a la possibilité de créer un nouveau projet avant d’avoir la main pour insérer les phases et ajouter des sous-projets. Selon les attentes du projet l’utilisateur a la possibilité d’organiser ses sous-projets en différents lots autant de fois que nécessaire,  créer des livrables et énumérer les différentes tâches tout en y attribuant les ressources adéquates (logicielles, humaines ou encore matérielles). L’application permet également de modifier ou supprimer tous les éléments cités ci-dessus. 
 
-\paragraph{}Comme énoncé précemment nous avons utilisés plusieurs outils pour le développement de notre application. Nous avons également fait le choix de développer cette application en html-css-php principalement car nous préférons ce langage à d'autres et que la gestion de la base de données s'y préttait bien. Nous avons également utilisé du javascript notamment pour afficher des calendrier lors de la sélection de dates, ainsi que de l'ajax pour avoir des formulaires dynamiques.
-\paragraph{}Nous nous sommes répartis les différentes parties du projet afin de pouvoir les implémenter de manière parallèlles et ainsi profiter au mieux de notre système de gestion de version sans créer trop de conflit lors de nos différents push.
+\paragraph{}Comme énoncé précédemment nous avons utilisés plusieurs outils pour le développement de notre application. Nous avons également fait le choix de développer cette application en html-css-php principalement car nous préférons ce langage à d'autres et que la gestion de la base de données s'y prêtait bien. Nous avons également utilisé du javascript notamment pour afficher des calendriers lors de la sélection de dates, ainsi que de l'ajax pour avoir des formulaires dynamiques.
+\paragraph{}Nous nous sommes répartis les différentes parties du projet afin de pouvoir les implémenter de manière parallèles et ainsi profiter au mieux de notre système de gestion de version sans créer trop de conflit lors de nos différents push sur notre dossier Git.
 
 \newpage
 \subsection{Difficultées recontrées}
-\paragraph{}Lors de ce projet les principales difficultés furent l'élaboration du modèle ainsi que la base de donnée, étant des élément clés pour tout le développement du projet il fallait bien être sur qu'avant de coder ces modèles étaient correct et que nous n'aurions pas à revenir dessus au cours du projet, sans quoi de nombreuses choses auraient été à modifier. Maitrisant bien le langage web et il été plus long que difficile d'implémenter notre plateforme.
+\paragraph{}Lors de ce projet les principales difficultés furent l'élaboration du modèle ainsi que la base de donnée, étant des éléments clés pour tout le développement du projet il fallait bien être sur qu'avant de coder ces modèles étaient correct et que nous n'aurions pas à revenir dessus au cours du projet, sans quoi de nombreuses choses auraient été à modifier. Maitrisant bien le langage web et il été plus long que difficile d'implémenter notre plateforme.
 
 \newpage
 
