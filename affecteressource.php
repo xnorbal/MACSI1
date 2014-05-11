@@ -14,13 +14,19 @@ if(!empty($_POST['ajouter'])) {
 			case 1:
 				//enregistrer ressource personne -> TACHERH
 				$idressH = $_POST["ressH"];
-				$res1 = mysqli_query($mysqli, "SELECT TXAFFECTATION FROM TACHERH WHERE RHID=".$idressH."");
+				$res1 = mysqli_query($mysqli, "SELECT TXAFFECTATION,TID FROM TACHERH WHERE RHID=".$idressH."");
 				$sum_txaffect = 0;
+				$maj = 0;
 				while($row = mysqli_fetch_assoc($res1)) {
 						$sum_txaffect += $row["TXAFFECTATION"];
+						if($row["TID"] == $idtache)
+							$maj = 1;
 				}
-				if(($sum_txaffect + $txaffect) <= 100){
+				if(($sum_txaffect + $txaffect) <= 100 && $maj == 0){
 					mysqli_query($mysqli, "INSERT INTO TACHERH(TID, RHID, TXAFFECTATION) VALUES(".$idtache.", '".$idressH."', '".$txaffect."')");
+					header("location:ressourcelist.php");
+				} else if(($txaffect <= 100) && ($maj == 1)){
+					mysqli_query($mysqli, "UPDATE TACHERH SET TXAFFECTATION = '".$txaffect."' WHERE TID = '".$idtache."' ");
 					header("location:ressourcelist.php");
 				} else {
 					$message = "La ressource est utilisee a plus de 100%";
@@ -29,13 +35,19 @@ if(!empty($_POST['ajouter'])) {
 			case 2:
 				//enregistrer ressource logiciel -> TACHERL
 				$idressL = $_POST["ressL"];
-				$res2 = mysqli_query($mysqli, "SELECT TXAFFECTATION FROM TACHERL WHERE RLID=".$idressL."");
+				$res2 = mysqli_query($mysqli, "SELECT TXAFFECTATION,TID FROM TACHERL WHERE RLID=".$idressL."");
 				$sum_txaffect = 0;
+				$maj = 0;
 				while($row = mysqli_fetch_assoc($res2)) {
 						$sum_txaffect += $row["txaffectation"];
+						if($row["TID"] == $idtache)
+							$maj = 1;
 				}
-				if(($sum_txaffect + $txaffect) <= 100){
+				if((($sum_txaffect + $txaffect) <= 100) && ($maj == 0)){
 					mysqli_query($mysqli, "INSERT INTO TACHERL(TID, RLID, txaffectation) VALUES(".$idtache.", '".$idressL."', '".$txaffect."')");
+					header("location:ressourcelist.php");
+				} else if(($txaffect <= 100) && ($maj == 1)){
+					mysqli_query($mysqli, "UPDATE TACHERL SET TXAFFECTATION = '".$txaffect."' WHERE TID = '".$idtache."' ");
 					header("location:ressourcelist.php");
 				} else {
 					$message = "La ressource est utilisee a plus de 100%";
@@ -44,13 +56,19 @@ if(!empty($_POST['ajouter'])) {
 			case 3:
 				//enregistrer ressource materiel -> TACHERM
 				$idressM = $_POST["ressM"];
-				$res3 = mysqli_query($mysqli, "SELECT TXAFFECTATION FROM TACHERM WHERE RMID=".$idressM."");
+				$res3 = mysqli_query($mysqli, "SELECT TXAFFECTATION,TID FROM TACHERM WHERE RMID=".$idressM."");
 				$sum_txaffect = 0;
+				$maj = 0;
 				while($row = mysqli_fetch_assoc($res2)) {
 						$sum_txaffect += $row["txaffectation"];
+						if($row["TID"] == $idtache)
+							$maj = 1;
 				}
-				if(($sum_txaffect + $txaffect) <= 100){
+				if((($sum_txaffect + $txaffect) <= 100) && ($maj == 0)){
 					mysqli_query($mysqli, "INSERT INTO TACHERM(TID, RMID, txaffectation) VALUES(".$idtache.", '".$idressM."', '".$txaffect."')");
+					header("location:ressourcelist.php");
+				} else if(($txaffect <= 100) && ($maj == 1)){
+					mysqli_query($mysqli, "UPDATE TACHERM SET TXAFFECTATION = '".$txaffect."' WHERE TID = '".$idtache."' ");
 					header("location:ressourcelist.php");
 				} else {
 					$message = "La ressource est utilise a plus de 100%";
@@ -59,7 +77,7 @@ if(!empty($_POST['ajouter'])) {
 		}
 	}
 	else {
-		$message = "casse noisette";
+		$message = "no comment";
 	}
 }
 

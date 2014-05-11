@@ -101,7 +101,7 @@
 
 
 \section{Introduction}
-\paragraph{}La bonne gestion de projet est un problème récurent, ce projet a pour but de nous apprendre un processus de gestion de projet étant très grandement utilisé dans différent domaines et plus particulièrement en informatique. Le but final est de réaliser une application permettant la gestion de projet suivant le processus décrit.
+\paragraph{}Dans le cadre du module de méthodes d’analyse et de conception de systèmes d’informations nous avons été amenés à réaliser un projet visant à réaliser une application permettant la gestion de projets avec toutes ses contraintes. En effet, la  bonne gestion de projet est un problème récurent, ce projet a pour but de nous apprendre un processus de gestion de projet étant très grandement utilisé dans différent domaines et plus particulièrement en informatique. Le but final est de réaliser une application permettant la gestion de projet suivant le processus décrit.
 
 \newpage
 
@@ -113,6 +113,7 @@
 \subsection{Modèle de classe}
 
 \begin{figure}[h!]
+	\centering
 	\includegraphics[height=4cm]{diagramme_de_classe.jpg}
 	\caption{Diagramme de classe}
 \end{figure}
@@ -124,11 +125,15 @@
 \section{Transformation du modèle}
 \subsection{Méthode de transformation}
 \paragraph{}Pour transformer le diagramme de classe précédent en modèle relationnel nous avons simplement appliqué les principes du cours de macsi1 en commençant par les spécialisations, s'en suit les relations et nous finissons par les agrégations pour arriver au modèle relationnel ci dessous.
+
 \subsection{Modèle relationnel}
-\paragraph{} // Photo du 3FN final
-\paragraph{} //Ajout descriptions pour chaque éléments et pk on a descnedus certains éléments
+\paragraph{}Suite à la lecture du sujet et à différent rendez-vous avec M Taher nous avons établis 
+
 \subsection{Eléments 3FN et cohérence}
-\paragraph{} //Passage en  3FN
+\paragraph{} Afin de diminuer les anomalies et les redondances nous avons modifié le modèle relationnel de façon à obtenir une 3ème forme normale et faire en sorte à ce que les attributs non-clé ne soient plus dépendants d’autres attributs ne faisant pas partie de la clé.
+\paragraph{}Par exemple :
+\lstinputlisting[language=SQL]{exemple3FN.sql}
+\paragraph{}Nous voyons bien ici que les attributs non clé sont indépendants entre eux.
 
 \newpage
 
@@ -139,6 +144,9 @@
 \lstinputlisting[language=SQL]{BD_MACSI1.sql}
 \newpage
 \subsection{Dévéloppement de l'application}
+\paragraph{}Notre application GESPRO permet à un utilisateur donné de répertorier ses projets avec toutes les informations relatives à ce dernier.
+\paragraph{}En effet dans un premier temps l’utilisateur crée un compte au niveau de l’application. Par la suite, il a la possibilité de créer un nouveau projet avant d’avoir la main pour insérer les phases et ajouter des sous-projets. Selon les attentes du projet l’utilisateur a la possibilité d’organiser ses sous-projets en différents lots autant de fois que nécessaire,  créer des livrables et énumérer les différentes tâches tout en y attribuant les ressources adéquates (logicielles, humaines ou encore matérielles). L’application permet également de modifier ou supprimer tous les éléments cités ci-dessus. 
+
 \paragraph{}Comme énoncé précemment nous avons utilisés plusieurs outils pour le développement de notre application. Nous avons également fait le choix de développer cette application en html-css-php principalement car nous préférons ce langage à d'autres et que la gestion de la base de données s'y préttait bien. Nous avons également utilisé du javascript notamment pour afficher des calendrier lors de la sélection de dates, ainsi que de l'ajax pour avoir des formulaires dynamiques.
 \paragraph{}Nous nous sommes répartis les différentes parties du projet afin de pouvoir les implémenter de manière parallèlles et ainsi profiter au mieux de notre système de gestion de version sans créer trop de conflit lors de nos différents push.
 
@@ -146,13 +154,10 @@
 \subsection{Difficultées recontrées}
 \paragraph{}Lors de ce projet les principales difficultés furent l'élaboration du modèle ainsi que la base de donnée, étant des élément clés pour tout le développement du projet il fallait bien être sur qu'avant de coder ces modèles étaient correct et que nous n'aurions pas à revenir dessus au cours du projet, sans quoi de nombreuses choses auraient été à modifier. Maitrisant bien le langage web et il été plus long que difficile d'implémenter notre plateforme.
 
-
-
-
 \newpage
 
 \section{Présentation de l'application}
-
+\paragraph{}Ci-dessous quelques screenshot de notre application :
 
 \newpage
 
